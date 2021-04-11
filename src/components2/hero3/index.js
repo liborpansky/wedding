@@ -1,7 +1,7 @@
 import React from 'react'
 import Particles from 'react-particles-js'
-
 import stockShape2 from '../../images/hero/icon.png'
+import './style.css'
 
 const PreviewHero = () => {
   return (

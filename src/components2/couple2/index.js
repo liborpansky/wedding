@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import couple1 from '../../images/couple/1.jpg'
-import couple2 from '../../images/couple/2.jpg'
-import couple3 from '../../images/couple/3.jpg'
+import couple1 from '../../images/couple/img-1.jpg'
+import couple2 from '../../images/couple/img-2.jpg'
+import couple3 from '../../images/couple/img-3.jpg'
 import './style.css'
 
 const Couple2 = () => {

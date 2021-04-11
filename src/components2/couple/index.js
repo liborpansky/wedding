@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import SectionTitle from '../section-title'
 import couple1 from '../../images/couple/img-1.jpg'
-import couple2 from '../../images/couple/img-2.jpg'
+import couple2 from '../../images/couple/img-2.png'
 import couple3 from '../../images/couple/2.png'
 import './style.css'
 
