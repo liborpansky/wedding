@@ -1,72 +1,58 @@
 import { graphql } from 'gatsby'
+import Img, { FixedObject } from 'gatsby-image'
 import React from 'react'
 
-import { IndexQueryQuery, PostByPathQuery } from '../../types/graphql-types'
-import Post from '../templates/post/post'
+import { WeddingPageQueryQuery } from '../../types/graphql-types'
+import { siteMetadata } from '../../gatsby-config'
+// import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
-import Layout from '../components/layout/layout'
+
+import Layout from '../components2/layout/layout'
+import Couple2 from '../components2/couple2'
+import PreviewHero from '../components2/hero'
+import Story from '../components2/story'
+import Welcome from '../components2/welcome-area'
+import People from '../components2/people'
+import Location from '../components2/location'
+import Gallery from '../components2/gallery'
+import Rsvp from '../components2/rsvp'
+import Gift from '../components2/gift'
+import Navbar from '../components2/Navbar'
+import Saveday from '../components2/countdown'
 
 interface Props {
-  data: IndexQueryQuery
+  data: WeddingPageQueryQuery
   location: Location
 }
 
-const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
-  const posts = data.remark.posts
-  const meta = data.site?.meta
+const Wedding: React.FC<Props> = ({ location, data }: Props) => {
+  const profile = data.profile?.childImageSharp?.fixed
 
   return (
     <Layout location={location}>
-      <Meta site={meta} />
-      {posts.map((post, i) => (
-        <Post
-          data={post as PostByPathQuery}
-          options={{
-            isIndex: true,
-          }}
-          key={i}
-        />
-      ))}
+      <Navbar title={siteMetadata.title} location={location} />
+      <PreviewHero />
+      <Saveday />
+      <Couple2 />
+      <Welcome />
+      <Story />
+      <People />
+      <Location />
+      <Gallery />
+      <Rsvp />
+      <Gift />
     </Layout>
   )
 }
 
-export default BlogIndex
+export default Wedding
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      meta: siteMetadata {
-        title
-        description
-        siteUrl
-        author
-        twitter
-        adsense
-      }
-    }
-    remark: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      posts: edges {
-        post: node {
-          html
-          frontmatter {
-            layout
-            title
-            path
-            category
-            tags
-            description
-            date(formatString: "YYYY/MM/DD")
-            image {
-              childImageSharp {
-                fluid(maxWidth: 500) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
+export const query = graphql`
+  query WeddingPageQuery {
+    profile: file(name: { eq: "profile" }) {
+      childImageSharp {
+        fixed(width: 120, height: 120) {
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }

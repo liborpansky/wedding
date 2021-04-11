@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 import { Link } from 'gatsby'
 import './style.css'
 
@@ -9,18 +10,21 @@ const Welcome = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="welcome-content">
-              <h2>Welcome to our big day</h2>
+              <h2>
+                <FormattedMessage id="welcome_big_day" />
+              </h2>
               <p>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or less
-                normal distribution of letters
+                <FormattedMessage id="welcome_text" />
               </p>
               <div className="btn">
-                <Link to="/home">RSVP</Link>
+                <Link to="#rsvp">
+                  <FormattedMessage id="rsvp" />
+                </Link>
               </div>
               <div className="btn">
-                <Link to="/home">Location</Link>
+                <Link to="#event">
+                  <FormattedMessage id="events" />
+                </Link>
               </div>
             </div>
           </div>

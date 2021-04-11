@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 import { Link } from 'gatsby'
 import couple1 from '../../images/couple/img-1.jpg'
 import couple2 from '../../images/couple/img-2.jpg'
@@ -11,7 +12,9 @@ const Couple2 = () => {
       <div className="container">
         <div className="col-l2">
           <div className="section-title text-center">
-            <h2>Happy Couple</h2>
+            <h2>
+              <FormattedMessage id="happy_couple" />
+            </h2>
           </div>
         </div>
         <div className="couple-wrap">
@@ -25,8 +28,7 @@ const Couple2 = () => {
                   <div className="couple-content">
                     <h4>Martina LONGO</h4>
                     <p>
-                      Hi I am Martina Longo. I am going to introduce myself. I
-                      am a professional graphic designer.
+                      <FormattedMessage id="martina_description" />
                     </p>
                   </div>
                   <div className="social-icon">
@@ -70,11 +72,10 @@ const Couple2 = () => {
                   <div className="couple-content">
                     <h4>Libor PANSKY</h4>
                     <p>
-                      Hi I am Libor Pansky. I am going to introduce myself. I am
-                      a professional graphic designer.
+                      <FormattedMessage id="libor_description" />
                     </p>
                   </div>
-                  <div className="social-icon">
+                  {/* <div className="social-icon">
                     <ul className="d-flex">
                       <li>
                         <Link to="/home2">
@@ -97,7 +98,7 @@ const Couple2 = () => {
                         </Link>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { useIntl } from 'gatsby-plugin-intl'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import MobileMenu from '../MobileMenu'
+import Language from '../language'
 
 import './style.css'
 
@@ -11,6 +13,7 @@ interface Props {
 }
 
 const Header: React.FC<Props> = ({ location, title }: Props) => {
+  const intl = useIntl()
   return (
     <div className="Header_root">
       <div className="header">
@@ -33,50 +36,41 @@ const Header: React.FC<Props> = ({ location, title }: Props) => {
               <div className="header-menu d-lg-block d-none">
                 <ul className="mobile-menu d-flex">
                   <li>
-                    <Link to="#">Home +</Link>
-                    <ul className="submenu">
-                      <li>
-                        <Link to="/">Home Style 1</Link>
-                      </li>
-                      <li>
-                        <Link to="/home2">Home Style 2</Link>
-                      </li>
-                      <li>
-                        <Link to="/home3">Home Style 3</Link>
-                      </li>
-                      <li>
-                        <Link to="/home4">Home Style 4</Link>
-                      </li>
-                    </ul>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <AnchorLink href="#couple">Couple</AnchorLink>
+                    <AnchorLink href="#couple">
+                      {intl.formatMessage({ id: 'couple' })}
+                    </AnchorLink>
                   </li>
                   <li>
-                    <AnchorLink href="#story">Story</AnchorLink>
+                    <AnchorLink href="#story">
+                      {intl.formatMessage({ id: 'story' })}
+                    </AnchorLink>
                   </li>
                   <li>
-                    <AnchorLink href="#people">People</AnchorLink>
+                    <AnchorLink href="#people">
+                      {intl.formatMessage({ id: 'people' })}
+                    </AnchorLink>
                   </li>
                   <li>
-                    <AnchorLink href="#event">Events</AnchorLink>
+                    <AnchorLink href="#event">
+                      {intl.formatMessage({ id: 'events' })}
+                    </AnchorLink>
                   </li>
                   <li>
-                    <AnchorLink href="#gallery">Gallery</AnchorLink>
+                    <AnchorLink href="#gallery">
+                      {intl.formatMessage({ id: 'gallery' })}
+                    </AnchorLink>
                   </li>
                   <li>
-                    <AnchorLink href="#rsvp">Rsvp</AnchorLink>
+                    <AnchorLink href="#rsvp">
+                      {intl.formatMessage({ id: 'rsvp' })}
+                    </AnchorLink>
                   </li>
+
                   <li>
-                    <Link to="#">Blog +</Link>
-                    <ul className="submenu submenu2">
-                      <li>
-                        <Link to="/blog">Blog</Link>
-                      </li>
-                      <li>
-                        <Link to="/Blog-details">Blog Details</Link>
-                      </li>
-                    </ul>
+                    <Language />
                   </li>
                 </ul>
               </div>

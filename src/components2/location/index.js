@@ -1,37 +1,36 @@
 import React from 'react'
+import { useIntl } from 'gatsby-plugin-intl'
 import { Link } from 'gatsby'
 import SectionTitle from '../section-title'
-import strory1 from '../../images/events/1.jpg'
-import strory2 from '../../images/events/2.jpg'
-import strory3 from '../../images/events/3.jpg'
+import story1 from '../../images/events/1.jpg'
+import story2 from '../../images/events/2.jpg'
+import story3 from '../../images/events/3.jpg'
 
 import './style.css'
 
 const Location = () => {
+  const intl = useIntl()
   return (
     <div id="event" className="service-area section-padding">
       <div className="container">
-        <SectionTitle section={'When & Where'} />
+        <SectionTitle section={intl.formatMessage({ id: 'when_where' })} />
         <div className="service-area-menu">
           <div className="Ceremony-wrap">
             <div className="row">
               <div className="col-lg-5">
                 <div className="ceromony-img">
-                  <img src={strory1} alt="" />
+                  <img src={story1} alt="" />
                 </div>
               </div>
               <div className="col-lg-7">
                 <div className="ceromony-content">
-                  <h3>Wedding Ceremony</h3>
-                  <span>Sunday, 25 July 18, 9.00 AM-5.00 PM</span>
-                  <span>256 Apay Road,Califonia Bong, London</span>
-                  <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal{' '}
-                  </p>
-                  <Link to="/">See Location</Link>
+                  <h3>{intl.formatMessage({ id: 'event_1_title' })}</h3>
+                  <span>{intl.formatMessage({ id: 'event_1_date' })}</span>
+                  <span>{intl.formatMessage({ id: 'event_1_address' })}</span>
+                  <p>{intl.formatMessage({ id: 'event_1_description' })}</p>
+                  <Link to="/">
+                    {intl.formatMessage({ id: 'see_location' })}
+                  </Link>
                 </div>
               </div>
             </div>
@@ -41,21 +40,16 @@ const Location = () => {
           <div className="row">
             <div className="col-lg-7">
               <div className="ceromony-content ceromony-content2">
-                <h3>Wedding Party</h3>
-                <span>Sunday, 25 July 18, 9.00 AM-5.00 PM</span>
-                <span>256 Apay Road,Califonia Bong, London</span>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal{' '}
-                </p>
-                <Link to="/">See Location</Link>
+                <h3>{intl.formatMessage({ id: 'event_2_title' })}</h3>
+                <span>{intl.formatMessage({ id: 'event_2_date' })}</span>
+                <span>{intl.formatMessage({ id: 'event_2_address' })}</span>
+                <p>{intl.formatMessage({ id: 'event_2_description' })}</p>
+                <Link to="/">{intl.formatMessage({ id: 'see_location' })}</Link>
               </div>
             </div>
             <div className="col-lg-5">
               <div className="ceromony-img">
-                <img src={strory2} alt="" />
+                <img src={story2} alt="" />
               </div>
             </div>
           </div>
@@ -64,21 +58,34 @@ const Location = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="ceromony-img">
-                <img src={strory3} alt="" />
+                <img src={story3} alt="" />
               </div>
             </div>
             <div className="col-lg-7">
               <div className="ceromony-content">
-                <h3>Reception Party</h3>
-                <span>Sunday, 25 July 18, 9.00 AM-5.00 PM</span>
-                <span>256 Apay Road,Califonia Bong, London</span>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal{' '}
-                </p>
-                <Link to="/">See Location</Link>
+                <h3>{intl.formatMessage({ id: 'event_3_title' })}</h3>
+                <span>{intl.formatMessage({ id: 'event_3_date' })}</span>
+                <span>{intl.formatMessage({ id: 'event_3_address' })}</span>
+                <p>{intl.formatMessage({ id: 'event_3_description' })}</p>
+                <Link to="/">{intl.formatMessage({ id: 'see_location' })}</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="Ceremony-wrap">
+          <div className="row">
+            <div className="col-lg-7">
+              <div className="ceromony-content ceromony-content2">
+                <h3>{intl.formatMessage({ id: 'event_4_title' })}</h3>
+                <span>{intl.formatMessage({ id: 'event_4_date' })}</span>
+                <span>{intl.formatMessage({ id: 'event_4_address' })}</span>
+                <p>{intl.formatMessage({ id: 'event_4_description' })}</p>
+                <Link to="/">{intl.formatMessage({ id: 'see_location' })}</Link>
+              </div>
+            </div>
+            <div className="col-lg-5">
+              <div className="ceromony-img">
+                <img src={story2} alt="" />
               </div>
             </div>
           </div>

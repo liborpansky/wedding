@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { Collapse, CardBody, Card } from 'reactstrap'
 import { Link } from 'gatsby'
@@ -44,43 +45,40 @@ export default class MobileMenu extends Component {
               <Card>
                 <CardBody>
                   <li>
-                    <Link to="/">Home Style 1</Link>
-                  </li>
-                  <li>
-                    <Link to="/home2">Home Style 2</Link>
-                  </li>
-                  <li>
-                    <Link to="/home3">Home Style 3</Link>
-                  </li>
-                  <li>
-                    <Link to="/home4">Home Style 4</Link>
+                    <Link to="/">Home</Link>
                   </li>
                 </CardBody>
               </Card>
             </Collapse>
             <li>
-              <AnchorLink href="#couple">Couple</AnchorLink>
+              <AnchorLink href="#couple">
+                <FormattedMessage id="couple" />
+              </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#story">Story</AnchorLink>
+              <AnchorLink href="#story">
+                <FormattedMessage id="story" />
+              </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#people">People</AnchorLink>
+              <AnchorLink href="#people">
+                <FormattedMessage id="people" />
+              </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#event">Events</AnchorLink>
+              <AnchorLink href="#event">
+                <FormattedMessage id="events" />
+              </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#gallery">Gallery</AnchorLink>
+              <AnchorLink href="#gallery">
+                <FormattedMessage id="gallery" />
+              </AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#rsvp">Rsvp</AnchorLink>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link to="/Blog-details">Blog Details</Link>
+              <AnchorLink href="#rsvp">
+                <FormattedMessage id="rsvp" />
+              </AnchorLink>
             </li>
           </ul>
         </div>

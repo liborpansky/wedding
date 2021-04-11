@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 import CountDown from 'reactjs-countdown'
 import './style.css'
 
@@ -13,7 +14,10 @@ class Saveday extends Component {
                 <div className="col-12 col-md-4 section-area">
                   <div className="section-sub"></div>
                   <h2 className="big">
-                    <span>We Are Waiting For.....</span> The Big Day
+                    <span>
+                      <FormattedMessage id="we_are_waiting" />
+                    </span>
+                    <FormattedMessage id="the_big_day" />
                   </h2>
                 </div>
                 <div className="col-12 col-md-8 clock-area">

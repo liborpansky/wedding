@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import './style.css'
 
 class Rsvp extends Component {
@@ -71,6 +72,7 @@ class Rsvp extends Component {
 
   render() {
     const { name, email, rsvp, events, notes, error } = this.state
+    const { intl } = this.props
     return (
       <div id="rsvp" className="rsvp-area go-rsvp-area section-padding">
         <div className="container">
@@ -79,8 +81,8 @@ class Rsvp extends Component {
               <div className="rsvp-wrap">
                 <div className="col-12">
                   <div className="section-title section-title4 text-center">
-                    <h2>Be Our Guest</h2>
-                    <p>Please reserve before December 15th, 2018.</p>
+                    <h2>{intl.formatMessage({ id: 'be_our_guest' })}</h2>
+                    <p>{intl.formatMessage({ id: 'please_reserve_before' })}</p>
                   </div>
                 </div>
                 <form onSubmit={this.subimtHandler}>
@@ -91,7 +93,7 @@ class Rsvp extends Component {
                           type="text"
                           value={name}
                           onChange={this.changeHandler}
-                          placeholder="Your Name*"
+                          placeholder={intl.formatMessage({ id: 'rsvp_name' })}
                           id="fname"
                           name="name"
                         />
@@ -100,7 +102,7 @@ class Rsvp extends Component {
                       <div className="col-12  col-sm-6">
                         <input
                           type="text"
-                          placeholder="Your Email*"
+                          placeholder={intl.formatMessage({ id: 'rsvp_email' })}
                           onChange={this.changeHandler}
                           value={email}
                           id="email"
@@ -116,7 +118,7 @@ class Rsvp extends Component {
                           name="rsvp"
                         >
                           <option disabled value="">
-                            Number Of rsvp*
+                            {intl.formatMessage({ id: 'rsvp_number' })}
                           </option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -133,11 +135,23 @@ class Rsvp extends Component {
                           name="events"
                         >
                           <option disabled value="">
-                            I Am Attending*
+                            {intl.formatMessage({ id: 'rsvp_attending' })}
                           </option>
-                          <option value="1">Al events</option>
-                          <option value="2">Wedding ceremony</option>
-                          <option value="3">Reception party</option>
+                          <option value="1">
+                            {intl.formatMessage({
+                              id: 'rsvp_attending_option_1',
+                            })}
+                          </option>
+                          <option value="2">
+                            {intl.formatMessage({
+                              id: 'rsvp_attending_option_2',
+                            })}
+                          </option>
+                          <option value="3">
+                            {intl.formatMessage({
+                              id: 'rsvp_attending_option_3',
+                            })}
+                          </option>
                         </select>
                         <p>{error.events ? error.events : ''}</p>
                       </div>
@@ -146,7 +160,9 @@ class Rsvp extends Component {
                           className="contact-textarea"
                           value={notes}
                           onChange={this.changeHandler}
-                          placeholder="Message"
+                          placeholder={intl.formatMessage({
+                            id: 'rsvp_message',
+                          })}
                           name="notes"
                         ></textarea>
                         <p>{error.notes ? error.notes : ''}</p>
@@ -154,7 +170,7 @@ class Rsvp extends Component {
                     </div>
                     <div className="col-12 text-center">
                       <button id="submit" type="submit" className="submit">
-                        Send Invitation
+                        {intl.formatMessage({ id: 'rsvp_send' })}
                       </button>
                     </div>
                   </div>
@@ -168,4 +184,4 @@ class Rsvp extends Component {
   }
 }
 
-export default Rsvp
+export default injectIntl(Rsvp)

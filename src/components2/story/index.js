@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 import { Link } from 'gatsby'
 import strory1 from '../../images/story/1.jpg'
 import strory2 from '../../images/story/2.jpg'
@@ -12,7 +13,9 @@ const Story = () => {
       <div className="container">
         <div className="col-l2">
           <div className="section-title text-center">
-            <h2>Our Story</h2>
+            <h2>
+              <FormattedMessage id="our_story" />
+            </h2>
           </div>
         </div>
         <div className="row">
@@ -32,16 +35,18 @@ const Story = () => {
                         </div>
                       </div>
                     </div>
-                    <h2>First time we met</h2>
-                    <span className="date">July 20, 2017</span>
+                    <h2>
+                      <FormattedMessage id="story_1_title" />
+                    </h2>
+                    <span className="date">
+                      <FormattedMessage id="story_1_date" />
+                    </span>
                     <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some,
+                      <FormattedMessage id="story_1_text" />
                     </p>
                     <div className="story-button">
                       <Link className="theme-btn" to="/" title="READ MORE">
-                        READ MORE
+                        <FormattedMessage id="read_more" />
                       </Link>
                     </div>
                   </div>
@@ -58,16 +63,18 @@ const Story = () => {
                         </div>
                       </div>
                     </div>
-                    <h2>Our First Date</h2>
-                    <span className="date">Dec 25, 2017</span>
+                    <h2>
+                      <FormattedMessage id="story_2_title" />
+                    </h2>
+                    <span className="date">
+                      <FormattedMessage id="story_2_date" />
+                    </span>
                     <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some,
+                      <FormattedMessage id="story_2_text" />
                     </p>
                     <div className="story-button">
                       <Link className="theme-btn" to="/" title="READ MORE">
-                        READ MORE
+                        <FormattedMessage id="read_more" />
                       </Link>
                     </div>
                   </div>
@@ -84,16 +91,18 @@ const Story = () => {
                         </div>
                       </div>
                     </div>
-                    <h2>Our Marriage Proposal</h2>
-                    <span className="date">Jan 10, 2018</span>
+                    <h2>
+                      <FormattedMessage id="story_3_title" />
+                    </h2>
+                    <span className="date">
+                      <FormattedMessage id="story_3_date" />
+                    </span>
                     <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some,
+                      <FormattedMessage id="story_3_text" />
                     </p>
                     <div className="story-button">
                       <Link className="theme-btn" to="/" title="READ MORE">
-                        READ MORE
+                        <FormattedMessage id="read_more" />
                       </Link>
                     </div>
                   </div>
@@ -110,16 +119,18 @@ const Story = () => {
                         </div>
                       </div>
                     </div>
-                    <h2>Our Engagement</h2>
-                    <span className="date">Jan 22, 2018</span>
+                    <h2>
+                      <FormattedMessage id="story_4_title" />
+                    </h2>
+                    <span className="date">
+                      <FormattedMessage id="story_4_date" />
+                    </span>
                     <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some,
+                      <FormattedMessage id="story_4_text" />
                     </p>
                     <div className="story-button">
                       <Link className="theme-btn" to="/" title="READ MORE">
-                        READ MORE
+                        <FormattedMessage id="read_more" />
                       </Link>
                     </div>
                   </div>

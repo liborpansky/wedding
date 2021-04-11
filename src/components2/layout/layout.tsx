@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-
 import Navbar from '../../components2/Navbar'
 import { siteMetadata } from '../../../gatsby-config'
 import Footer from '../../components2/footer'

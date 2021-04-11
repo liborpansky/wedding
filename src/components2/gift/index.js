@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -48,11 +49,11 @@ class Gift extends Component {
         <div className="container">
           <div className="col-12">
             <div className="section-title text-center">
-              <h2>Gift Registration</h2>
+              <h2>
+                <FormattedMessage id="gift_registration" />
+              </h2>
               <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form, by
-                injected humour, or randomised.
+                <FormattedMessage id="gift_registration_text" />
               </p>
             </div>
           </div>

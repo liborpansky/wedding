@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import ReactFancyBox from 'react-fancybox'
 import 'react-fancybox/lib/fancybox.css'
 import SectionTitle from '../section-title'
@@ -13,9 +14,10 @@ import galimg6 from '../../images/gal/2.jpg'
 
 class Gallery extends Component {
   render() {
+    const { intl } = this.props
     return (
       <div id="gallery" className="Gallery-section section-padding pb-70">
-        <SectionTitle section={'Our Gallery'} />
+        <SectionTitle section={intl.formatMessage({ id: 'our_gallery' })} />
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-6 col-12">
@@ -55,4 +57,4 @@ class Gallery extends Component {
   }
 }
 
-export default Gallery
+export default injectIntl(Gallery)

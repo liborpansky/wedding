@@ -1925,6 +1925,7 @@ export type QuerySitePageArgs = {
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
+  context?: Maybe<SitePageContextFilterInput>;
   pluginCreator?: Maybe<SitePluginFilterInput>;
   pluginCreatorId?: Maybe<StringQueryOperatorInput>;
   componentPath?: Maybe<StringQueryOperatorInput>;
@@ -2393,6 +2394,7 @@ export type SitePage = Node & {
   children: Array<Node>;
   internal: Internal;
   isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>;
+  context?: Maybe<SitePageContext>;
   pluginCreator?: Maybe<SitePlugin>;
   pluginCreatorId?: Maybe<Scalars['String']>;
   componentPath?: Maybe<Scalars['String']>;
@@ -2417,6 +2419,170 @@ export type SitePageConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
   field: SitePageFieldsEnum;
+};
+
+export type SitePageContext = {
+  language?: Maybe<Scalars['String']>;
+  intl?: Maybe<SitePageContextIntl>;
+};
+
+export type SitePageContextFilterInput = {
+  language?: Maybe<StringQueryOperatorInput>;
+  intl?: Maybe<SitePageContextIntlFilterInput>;
+};
+
+export type SitePageContextIntl = {
+  language?: Maybe<Scalars['String']>;
+  languages?: Maybe<Array<Maybe<Scalars['String']>>>;
+  messages?: Maybe<SitePageContextIntlMessages>;
+  routed?: Maybe<Scalars['Boolean']>;
+  originalPath?: Maybe<Scalars['String']>;
+  redirect?: Maybe<Scalars['Boolean']>;
+  defaultLanguage?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextIntlFilterInput = {
+  language?: Maybe<StringQueryOperatorInput>;
+  languages?: Maybe<StringQueryOperatorInput>;
+  messages?: Maybe<SitePageContextIntlMessagesFilterInput>;
+  routed?: Maybe<BooleanQueryOperatorInput>;
+  originalPath?: Maybe<StringQueryOperatorInput>;
+  redirect?: Maybe<BooleanQueryOperatorInput>;
+  defaultLanguage?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextIntlMessages = {
+  _20210712?: Maybe<Scalars['String']>;
+  couple?: Maybe<Scalars['String']>;
+  story?: Maybe<Scalars['String']>;
+  people?: Maybe<Scalars['String']>;
+  events?: Maybe<Scalars['String']>;
+  gallery?: Maybe<Scalars['String']>;
+  rsvp?: Maybe<Scalars['String']>;
+  getting_married?: Maybe<Scalars['String']>;
+  save_the_date?: Maybe<Scalars['String']>;
+  we_are_waiting?: Maybe<Scalars['String']>;
+  the_big_day?: Maybe<Scalars['String']>;
+  happy_couple?: Maybe<Scalars['String']>;
+  martina_description?: Maybe<Scalars['String']>;
+  libor_description?: Maybe<Scalars['String']>;
+  welcome_big_day?: Maybe<Scalars['String']>;
+  welcome_text?: Maybe<Scalars['String']>;
+  read_more?: Maybe<Scalars['String']>;
+  our_story?: Maybe<Scalars['String']>;
+  story_1_title?: Maybe<Scalars['String']>;
+  story_1_date?: Maybe<Scalars['String']>;
+  story_1_text?: Maybe<Scalars['String']>;
+  story_2_title?: Maybe<Scalars['String']>;
+  story_2_date?: Maybe<Scalars['String']>;
+  story_2_text?: Maybe<Scalars['String']>;
+  story_3_title?: Maybe<Scalars['String']>;
+  story_3_date?: Maybe<Scalars['String']>;
+  story_3_text?: Maybe<Scalars['String']>;
+  story_4_title?: Maybe<Scalars['String']>;
+  story_4_date?: Maybe<Scalars['String']>;
+  story_4_text?: Maybe<Scalars['String']>;
+  when_where?: Maybe<Scalars['String']>;
+  see_location?: Maybe<Scalars['String']>;
+  event_1_title?: Maybe<Scalars['String']>;
+  event_1_date?: Maybe<Scalars['String']>;
+  event_1_address?: Maybe<Scalars['String']>;
+  event_1_description?: Maybe<Scalars['String']>;
+  event_2_title?: Maybe<Scalars['String']>;
+  event_2_date?: Maybe<Scalars['String']>;
+  event_2_address?: Maybe<Scalars['String']>;
+  event_2_description?: Maybe<Scalars['String']>;
+  event_3_title?: Maybe<Scalars['String']>;
+  event_3_date?: Maybe<Scalars['String']>;
+  event_3_address?: Maybe<Scalars['String']>;
+  event_3_description?: Maybe<Scalars['String']>;
+  event_4_title?: Maybe<Scalars['String']>;
+  event_4_date?: Maybe<Scalars['String']>;
+  event_4_address?: Maybe<Scalars['String']>;
+  event_4_description?: Maybe<Scalars['String']>;
+  our_gallery?: Maybe<Scalars['String']>;
+  be_our_guest?: Maybe<Scalars['String']>;
+  please_reserve_before?: Maybe<Scalars['String']>;
+  rsvp_name?: Maybe<Scalars['String']>;
+  rsvp_email?: Maybe<Scalars['String']>;
+  rsvp_number?: Maybe<Scalars['String']>;
+  rsvp_attending?: Maybe<Scalars['String']>;
+  rsvp_attending_option_1?: Maybe<Scalars['String']>;
+  rsvp_attending_option_2?: Maybe<Scalars['String']>;
+  rsvp_attending_option_3?: Maybe<Scalars['String']>;
+  rsvp_message?: Maybe<Scalars['String']>;
+  rsvp_send?: Maybe<Scalars['String']>;
+  gift_registration?: Maybe<Scalars['String']>;
+  gift_registration_text?: Maybe<Scalars['String']>;
+  thank_you?: Maybe<Scalars['String']>;
+  for_being_with_us?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextIntlMessagesFilterInput = {
+  _20210712?: Maybe<StringQueryOperatorInput>;
+  couple?: Maybe<StringQueryOperatorInput>;
+  story?: Maybe<StringQueryOperatorInput>;
+  people?: Maybe<StringQueryOperatorInput>;
+  events?: Maybe<StringQueryOperatorInput>;
+  gallery?: Maybe<StringQueryOperatorInput>;
+  rsvp?: Maybe<StringQueryOperatorInput>;
+  getting_married?: Maybe<StringQueryOperatorInput>;
+  save_the_date?: Maybe<StringQueryOperatorInput>;
+  we_are_waiting?: Maybe<StringQueryOperatorInput>;
+  the_big_day?: Maybe<StringQueryOperatorInput>;
+  happy_couple?: Maybe<StringQueryOperatorInput>;
+  martina_description?: Maybe<StringQueryOperatorInput>;
+  libor_description?: Maybe<StringQueryOperatorInput>;
+  welcome_big_day?: Maybe<StringQueryOperatorInput>;
+  welcome_text?: Maybe<StringQueryOperatorInput>;
+  read_more?: Maybe<StringQueryOperatorInput>;
+  our_story?: Maybe<StringQueryOperatorInput>;
+  story_1_title?: Maybe<StringQueryOperatorInput>;
+  story_1_date?: Maybe<StringQueryOperatorInput>;
+  story_1_text?: Maybe<StringQueryOperatorInput>;
+  story_2_title?: Maybe<StringQueryOperatorInput>;
+  story_2_date?: Maybe<StringQueryOperatorInput>;
+  story_2_text?: Maybe<StringQueryOperatorInput>;
+  story_3_title?: Maybe<StringQueryOperatorInput>;
+  story_3_date?: Maybe<StringQueryOperatorInput>;
+  story_3_text?: Maybe<StringQueryOperatorInput>;
+  story_4_title?: Maybe<StringQueryOperatorInput>;
+  story_4_date?: Maybe<StringQueryOperatorInput>;
+  story_4_text?: Maybe<StringQueryOperatorInput>;
+  when_where?: Maybe<StringQueryOperatorInput>;
+  see_location?: Maybe<StringQueryOperatorInput>;
+  event_1_title?: Maybe<StringQueryOperatorInput>;
+  event_1_date?: Maybe<StringQueryOperatorInput>;
+  event_1_address?: Maybe<StringQueryOperatorInput>;
+  event_1_description?: Maybe<StringQueryOperatorInput>;
+  event_2_title?: Maybe<StringQueryOperatorInput>;
+  event_2_date?: Maybe<StringQueryOperatorInput>;
+  event_2_address?: Maybe<StringQueryOperatorInput>;
+  event_2_description?: Maybe<StringQueryOperatorInput>;
+  event_3_title?: Maybe<StringQueryOperatorInput>;
+  event_3_date?: Maybe<StringQueryOperatorInput>;
+  event_3_address?: Maybe<StringQueryOperatorInput>;
+  event_3_description?: Maybe<StringQueryOperatorInput>;
+  event_4_title?: Maybe<StringQueryOperatorInput>;
+  event_4_date?: Maybe<StringQueryOperatorInput>;
+  event_4_address?: Maybe<StringQueryOperatorInput>;
+  event_4_description?: Maybe<StringQueryOperatorInput>;
+  our_gallery?: Maybe<StringQueryOperatorInput>;
+  be_our_guest?: Maybe<StringQueryOperatorInput>;
+  please_reserve_before?: Maybe<StringQueryOperatorInput>;
+  rsvp_name?: Maybe<StringQueryOperatorInput>;
+  rsvp_email?: Maybe<StringQueryOperatorInput>;
+  rsvp_number?: Maybe<StringQueryOperatorInput>;
+  rsvp_attending?: Maybe<StringQueryOperatorInput>;
+  rsvp_attending_option_1?: Maybe<StringQueryOperatorInput>;
+  rsvp_attending_option_2?: Maybe<StringQueryOperatorInput>;
+  rsvp_attending_option_3?: Maybe<StringQueryOperatorInput>;
+  rsvp_message?: Maybe<StringQueryOperatorInput>;
+  rsvp_send?: Maybe<StringQueryOperatorInput>;
+  gift_registration?: Maybe<StringQueryOperatorInput>;
+  gift_registration_text?: Maybe<StringQueryOperatorInput>;
+  thank_you?: Maybe<StringQueryOperatorInput>;
+  for_being_with_us?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -2518,6 +2684,77 @@ export type SitePageFieldsEnum =
   | 'internal___owner'
   | 'internal___type'
   | 'isCreatedByStatefulCreatePages'
+  | 'context___language'
+  | 'context___intl___language'
+  | 'context___intl___languages'
+  | 'context___intl___messages____20210712'
+  | 'context___intl___messages___couple'
+  | 'context___intl___messages___story'
+  | 'context___intl___messages___people'
+  | 'context___intl___messages___events'
+  | 'context___intl___messages___gallery'
+  | 'context___intl___messages___rsvp'
+  | 'context___intl___messages___getting_married'
+  | 'context___intl___messages___save_the_date'
+  | 'context___intl___messages___we_are_waiting'
+  | 'context___intl___messages___the_big_day'
+  | 'context___intl___messages___happy_couple'
+  | 'context___intl___messages___martina_description'
+  | 'context___intl___messages___libor_description'
+  | 'context___intl___messages___welcome_big_day'
+  | 'context___intl___messages___welcome_text'
+  | 'context___intl___messages___read_more'
+  | 'context___intl___messages___our_story'
+  | 'context___intl___messages___story_1_title'
+  | 'context___intl___messages___story_1_date'
+  | 'context___intl___messages___story_1_text'
+  | 'context___intl___messages___story_2_title'
+  | 'context___intl___messages___story_2_date'
+  | 'context___intl___messages___story_2_text'
+  | 'context___intl___messages___story_3_title'
+  | 'context___intl___messages___story_3_date'
+  | 'context___intl___messages___story_3_text'
+  | 'context___intl___messages___story_4_title'
+  | 'context___intl___messages___story_4_date'
+  | 'context___intl___messages___story_4_text'
+  | 'context___intl___messages___when_where'
+  | 'context___intl___messages___see_location'
+  | 'context___intl___messages___event_1_title'
+  | 'context___intl___messages___event_1_date'
+  | 'context___intl___messages___event_1_address'
+  | 'context___intl___messages___event_1_description'
+  | 'context___intl___messages___event_2_title'
+  | 'context___intl___messages___event_2_date'
+  | 'context___intl___messages___event_2_address'
+  | 'context___intl___messages___event_2_description'
+  | 'context___intl___messages___event_3_title'
+  | 'context___intl___messages___event_3_date'
+  | 'context___intl___messages___event_3_address'
+  | 'context___intl___messages___event_3_description'
+  | 'context___intl___messages___event_4_title'
+  | 'context___intl___messages___event_4_date'
+  | 'context___intl___messages___event_4_address'
+  | 'context___intl___messages___event_4_description'
+  | 'context___intl___messages___our_gallery'
+  | 'context___intl___messages___be_our_guest'
+  | 'context___intl___messages___please_reserve_before'
+  | 'context___intl___messages___rsvp_name'
+  | 'context___intl___messages___rsvp_email'
+  | 'context___intl___messages___rsvp_number'
+  | 'context___intl___messages___rsvp_attending'
+  | 'context___intl___messages___rsvp_attending_option_1'
+  | 'context___intl___messages___rsvp_attending_option_2'
+  | 'context___intl___messages___rsvp_attending_option_3'
+  | 'context___intl___messages___rsvp_message'
+  | 'context___intl___messages___rsvp_send'
+  | 'context___intl___messages___gift_registration'
+  | 'context___intl___messages___gift_registration_text'
+  | 'context___intl___messages___thank_you'
+  | 'context___intl___messages___for_being_with_us'
+  | 'context___intl___routed'
+  | 'context___intl___originalPath'
+  | 'context___intl___redirect'
+  | 'context___intl___defaultLanguage'
   | 'pluginCreator___id'
   | 'pluginCreator___parent___id'
   | 'pluginCreator___parent___parent___id'
@@ -2571,16 +2808,6 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___maxWidth'
   | 'pluginCreator___pluginOptions___linkImagesToOriginal'
   | 'pluginCreator___pluginOptions___wrapperStyle'
-  | 'pluginCreator___pluginOptions___pathPrefix'
-  | 'pluginCreator___pluginOptions___backgroundColor'
-  | 'pluginCreator___pluginOptions___showCaptions'
-  | 'pluginCreator___pluginOptions___markdownCaptions'
-  | 'pluginCreator___pluginOptions___withWebp'
-  | 'pluginCreator___pluginOptions___tracedSVG'
-  | 'pluginCreator___pluginOptions___loading'
-  | 'pluginCreator___pluginOptions___disableBgImageOnAlpha'
-  | 'pluginCreator___pluginOptions___disableBgImage'
-  | 'pluginCreator___pluginOptions___ignoreFileExtensions'
   | 'pluginCreator___pluginOptions___short_name'
   | 'pluginCreator___pluginOptions___description'
   | 'pluginCreator___pluginOptions___homepage_url'
@@ -2601,6 +2828,9 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___mergeLinkHeaders'
   | 'pluginCreator___pluginOptions___mergeCachingHeaders'
   | 'pluginCreator___pluginOptions___fileName'
+  | 'pluginCreator___pluginOptions___languages'
+  | 'pluginCreator___pluginOptions___defaultLanguage'
+  | 'pluginCreator___pluginOptions___redirect'
   | 'pluginCreator___pluginOptions___pathCheck'
   | 'pluginCreator___nodeAPIs'
   | 'pluginCreator___browserAPIs'
@@ -2635,6 +2865,7 @@ export type SitePageFilterInput = {
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
+  context?: Maybe<SitePageContextFilterInput>;
   pluginCreator?: Maybe<SitePluginFilterInput>;
   pluginCreatorId?: Maybe<StringQueryOperatorInput>;
   componentPath?: Maybe<StringQueryOperatorInput>;
@@ -2795,16 +3026,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___plugins___pluginOptions___maxWidth'
   | 'pluginOptions___plugins___pluginOptions___linkImagesToOriginal'
   | 'pluginOptions___plugins___pluginOptions___wrapperStyle'
-  | 'pluginOptions___plugins___pluginOptions___pathPrefix'
-  | 'pluginOptions___plugins___pluginOptions___backgroundColor'
-  | 'pluginOptions___plugins___pluginOptions___showCaptions'
-  | 'pluginOptions___plugins___pluginOptions___markdownCaptions'
-  | 'pluginOptions___plugins___pluginOptions___withWebp'
-  | 'pluginOptions___plugins___pluginOptions___tracedSVG'
-  | 'pluginOptions___plugins___pluginOptions___loading'
-  | 'pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha'
-  | 'pluginOptions___plugins___pluginOptions___disableBgImage'
-  | 'pluginOptions___plugins___pluginOptions___ignoreFileExtensions'
   | 'pluginOptions___plugins___browserAPIs'
   | 'pluginOptions___plugins___pluginFilepath'
   | 'pluginOptions___path'
@@ -2812,16 +3033,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___maxWidth'
   | 'pluginOptions___linkImagesToOriginal'
   | 'pluginOptions___wrapperStyle'
-  | 'pluginOptions___pathPrefix'
-  | 'pluginOptions___backgroundColor'
-  | 'pluginOptions___showCaptions'
-  | 'pluginOptions___markdownCaptions'
-  | 'pluginOptions___withWebp'
-  | 'pluginOptions___tracedSVG'
-  | 'pluginOptions___loading'
-  | 'pluginOptions___disableBgImageOnAlpha'
-  | 'pluginOptions___disableBgImage'
-  | 'pluginOptions___ignoreFileExtensions'
   | 'pluginOptions___short_name'
   | 'pluginOptions___description'
   | 'pluginOptions___homepage_url'
@@ -2842,6 +3053,9 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___mergeLinkHeaders'
   | 'pluginOptions___mergeCachingHeaders'
   | 'pluginOptions___fileName'
+  | 'pluginOptions___languages'
+  | 'pluginOptions___defaultLanguage'
+  | 'pluginOptions___redirect'
   | 'pluginOptions___pathCheck'
   | 'nodeAPIs'
   | 'browserAPIs'
@@ -2961,16 +3175,6 @@ export type SitePluginPluginOptions = {
   maxWidth?: Maybe<Scalars['Int']>;
   linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
   wrapperStyle?: Maybe<Scalars['String']>;
-  pathPrefix?: Maybe<Scalars['String']>;
-  backgroundColor?: Maybe<Scalars['String']>;
-  showCaptions?: Maybe<Scalars['Boolean']>;
-  markdownCaptions?: Maybe<Scalars['Boolean']>;
-  withWebp?: Maybe<Scalars['Boolean']>;
-  tracedSVG?: Maybe<Scalars['Boolean']>;
-  loading?: Maybe<Scalars['String']>;
-  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>;
-  disableBgImage?: Maybe<Scalars['Boolean']>;
-  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars['String']>>>;
   short_name?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
   homepage_url?: Maybe<Scalars['String']>;
@@ -2988,6 +3192,9 @@ export type SitePluginPluginOptions = {
   mergeLinkHeaders?: Maybe<Scalars['Boolean']>;
   mergeCachingHeaders?: Maybe<Scalars['Boolean']>;
   fileName?: Maybe<Scalars['String']>;
+  languages?: Maybe<Array<Maybe<Scalars['String']>>>;
+  defaultLanguage?: Maybe<Scalars['String']>;
+  redirect?: Maybe<Scalars['Boolean']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
 };
 
@@ -2998,16 +3205,6 @@ export type SitePluginPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>;
   linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
   wrapperStyle?: Maybe<StringQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
-  backgroundColor?: Maybe<StringQueryOperatorInput>;
-  showCaptions?: Maybe<BooleanQueryOperatorInput>;
-  markdownCaptions?: Maybe<BooleanQueryOperatorInput>;
-  withWebp?: Maybe<BooleanQueryOperatorInput>;
-  tracedSVG?: Maybe<BooleanQueryOperatorInput>;
-  loading?: Maybe<StringQueryOperatorInput>;
-  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>;
-  disableBgImage?: Maybe<BooleanQueryOperatorInput>;
-  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>;
   short_name?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   homepage_url?: Maybe<StringQueryOperatorInput>;
@@ -3025,6 +3222,9 @@ export type SitePluginPluginOptionsFilterInput = {
   mergeLinkHeaders?: Maybe<BooleanQueryOperatorInput>;
   mergeCachingHeaders?: Maybe<BooleanQueryOperatorInput>;
   fileName?: Maybe<StringQueryOperatorInput>;
+  languages?: Maybe<StringQueryOperatorInput>;
+  defaultLanguage?: Maybe<StringQueryOperatorInput>;
+  redirect?: Maybe<BooleanQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -3072,32 +3272,12 @@ export type SitePluginPluginOptionsPluginsPluginOptions = {
   maxWidth?: Maybe<Scalars['Int']>;
   linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
   wrapperStyle?: Maybe<Scalars['String']>;
-  pathPrefix?: Maybe<Scalars['String']>;
-  backgroundColor?: Maybe<Scalars['String']>;
-  showCaptions?: Maybe<Scalars['Boolean']>;
-  markdownCaptions?: Maybe<Scalars['Boolean']>;
-  withWebp?: Maybe<Scalars['Boolean']>;
-  tracedSVG?: Maybe<Scalars['Boolean']>;
-  loading?: Maybe<Scalars['String']>;
-  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>;
-  disableBgImage?: Maybe<Scalars['Boolean']>;
-  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>;
   linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
   wrapperStyle?: Maybe<StringQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
-  backgroundColor?: Maybe<StringQueryOperatorInput>;
-  showCaptions?: Maybe<BooleanQueryOperatorInput>;
-  markdownCaptions?: Maybe<BooleanQueryOperatorInput>;
-  withWebp?: Maybe<BooleanQueryOperatorInput>;
-  tracedSVG?: Maybe<BooleanQueryOperatorInput>;
-  loading?: Maybe<StringQueryOperatorInput>;
-  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>;
-  disableBgImage?: Maybe<BooleanQueryOperatorInput>;
-  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginSortInput = {
@@ -3141,26 +3321,15 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
-export type IndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
+export type WeddingPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type IndexQueryQuery = { site?: Maybe<{ meta?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'siteUrl' | 'author' | 'twitter' | 'adsense'>> }>, remark: { posts: Array<{ post: (
-        Pick<MarkdownRemark, 'html'>
-        & { frontmatter?: Maybe<(
-          Pick<MarkdownRemarkFrontmatter, 'layout' | 'title' | 'path' | 'category' | 'tags' | 'description' | 'date'>
-          & { image?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> }
-        )> }
-      ) }> } };
+export type WeddingPageQueryQuery = { profile?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixed_WithWebpFragment> }> }> };
 
 export type ProfilePageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type ProfilePageQueryQuery = { profile?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixed_WithWebpFragment> }> }> };
-
-export type WeddingPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type WeddingPageQueryQuery = { profile?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixed_WithWebpFragment> }> }> };
 
 export type PostByPathQueryVariables = Exact<{
   path: Scalars['String'];
