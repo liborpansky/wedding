@@ -1,16 +1,7 @@
 import React, { Component } from 'react'
 import { injectIntl } from 'gatsby-plugin-intl'
-import ReactFancyBox from 'react-fancybox'
-import 'react-fancybox/lib/fancybox.css'
 import SectionTitle from '../section-title'
 import './style.css'
-
-import galimg1 from '../../images/gal/1.jpg'
-import galimg2 from '../../images/gal/6.jpg'
-import galimg3 from '../../images/gal/3.jpg'
-import galimg4 from '../../images/gal/4.jpg'
-import galimg5 from '../../images/gal/5.jpg'
-import galimg6 from '../../images/gal/2.jpg'
 
 class Gallery extends Component {
   render() {
@@ -20,36 +11,11 @@ class Gallery extends Component {
         <SectionTitle section={intl.formatMessage({ id: 'our_gallery' })} />
         <div className="container">
           <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-              <div className="gallery-img">
-                <ReactFancyBox thumbnail={galimg1} image={galimg1} />
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-              <div className="gallery-img">
-                <ReactFancyBox thumbnail={galimg2} image={galimg2} />
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-              <div className="gallery-img">
-                <ReactFancyBox thumbnail={galimg3} image={galimg3} />
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-              <div className="gallery-img">
-                <ReactFancyBox thumbnail={galimg4} image={galimg4} />
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-              <div className="gallery-img">
-                <ReactFancyBox thumbnail={galimg5} image={galimg5} />
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-              <div className="gallery-img">
-                <ReactFancyBox thumbnail={galimg6} image={galimg6} />
-              </div>
-            </div>
+            Qui troverete le foto del nostro giorno e del nostro viaggio di
+            nozze! Se vuoi contribuire alla raccolta di meravigliosi ricordi
+            scarica l'App WedShoots, accedi all'album condiviso inserendo il
+            codice 0000000666 e il giorno del matrimonio divertiti a scattare e
+            caricare tantissime foto!
           </div>
         </div>
       </div>

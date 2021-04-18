@@ -1,7 +1,5 @@
 export type Maybe<T> = T | null;
-export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
+export type Exact<T extends { [key: string]: any }> = { [K in keyof T]: T[K] };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -2472,34 +2470,29 @@ export type SitePageContextIntlMessages = {
   our_story?: Maybe<Scalars['String']>;
   story_1_title?: Maybe<Scalars['String']>;
   story_1_date?: Maybe<Scalars['String']>;
-  story_1_text?: Maybe<Scalars['String']>;
   story_2_title?: Maybe<Scalars['String']>;
   story_2_date?: Maybe<Scalars['String']>;
-  story_2_text?: Maybe<Scalars['String']>;
   story_3_title?: Maybe<Scalars['String']>;
   story_3_date?: Maybe<Scalars['String']>;
-  story_3_text?: Maybe<Scalars['String']>;
   story_4_title?: Maybe<Scalars['String']>;
   story_4_date?: Maybe<Scalars['String']>;
-  story_4_text?: Maybe<Scalars['String']>;
+  story_5_title?: Maybe<Scalars['String']>;
+  story_5_date?: Maybe<Scalars['String']>;
+  groomsmen_bridesmaid?: Maybe<Scalars['String']>;
   when_where?: Maybe<Scalars['String']>;
   see_location?: Maybe<Scalars['String']>;
   event_1_title?: Maybe<Scalars['String']>;
   event_1_date?: Maybe<Scalars['String']>;
   event_1_address?: Maybe<Scalars['String']>;
-  event_1_description?: Maybe<Scalars['String']>;
   event_2_title?: Maybe<Scalars['String']>;
   event_2_date?: Maybe<Scalars['String']>;
   event_2_address?: Maybe<Scalars['String']>;
-  event_2_description?: Maybe<Scalars['String']>;
   event_3_title?: Maybe<Scalars['String']>;
   event_3_date?: Maybe<Scalars['String']>;
   event_3_address?: Maybe<Scalars['String']>;
-  event_3_description?: Maybe<Scalars['String']>;
   event_4_title?: Maybe<Scalars['String']>;
   event_4_date?: Maybe<Scalars['String']>;
   event_4_address?: Maybe<Scalars['String']>;
-  event_4_description?: Maybe<Scalars['String']>;
   our_gallery?: Maybe<Scalars['String']>;
   be_our_guest?: Maybe<Scalars['String']>;
   please_reserve_before?: Maybe<Scalars['String']>;
@@ -2509,13 +2502,16 @@ export type SitePageContextIntlMessages = {
   rsvp_attending?: Maybe<Scalars['String']>;
   rsvp_attending_option_1?: Maybe<Scalars['String']>;
   rsvp_attending_option_2?: Maybe<Scalars['String']>;
-  rsvp_attending_option_3?: Maybe<Scalars['String']>;
   rsvp_message?: Maybe<Scalars['String']>;
   rsvp_send?: Maybe<Scalars['String']>;
   gift_registration?: Maybe<Scalars['String']>;
   gift_registration_text?: Maybe<Scalars['String']>;
   thank_you?: Maybe<Scalars['String']>;
   for_being_with_us?: Maybe<Scalars['String']>;
+  event_1_description?: Maybe<Scalars['String']>;
+  event_2_description?: Maybe<Scalars['String']>;
+  event_3_description?: Maybe<Scalars['String']>;
+  event_4_description?: Maybe<Scalars['String']>;
 };
 
 export type SitePageContextIntlMessagesFilterInput = {
@@ -2539,34 +2535,29 @@ export type SitePageContextIntlMessagesFilterInput = {
   our_story?: Maybe<StringQueryOperatorInput>;
   story_1_title?: Maybe<StringQueryOperatorInput>;
   story_1_date?: Maybe<StringQueryOperatorInput>;
-  story_1_text?: Maybe<StringQueryOperatorInput>;
   story_2_title?: Maybe<StringQueryOperatorInput>;
   story_2_date?: Maybe<StringQueryOperatorInput>;
-  story_2_text?: Maybe<StringQueryOperatorInput>;
   story_3_title?: Maybe<StringQueryOperatorInput>;
   story_3_date?: Maybe<StringQueryOperatorInput>;
-  story_3_text?: Maybe<StringQueryOperatorInput>;
   story_4_title?: Maybe<StringQueryOperatorInput>;
   story_4_date?: Maybe<StringQueryOperatorInput>;
-  story_4_text?: Maybe<StringQueryOperatorInput>;
+  story_5_title?: Maybe<StringQueryOperatorInput>;
+  story_5_date?: Maybe<StringQueryOperatorInput>;
+  groomsmen_bridesmaid?: Maybe<StringQueryOperatorInput>;
   when_where?: Maybe<StringQueryOperatorInput>;
   see_location?: Maybe<StringQueryOperatorInput>;
   event_1_title?: Maybe<StringQueryOperatorInput>;
   event_1_date?: Maybe<StringQueryOperatorInput>;
   event_1_address?: Maybe<StringQueryOperatorInput>;
-  event_1_description?: Maybe<StringQueryOperatorInput>;
   event_2_title?: Maybe<StringQueryOperatorInput>;
   event_2_date?: Maybe<StringQueryOperatorInput>;
   event_2_address?: Maybe<StringQueryOperatorInput>;
-  event_2_description?: Maybe<StringQueryOperatorInput>;
   event_3_title?: Maybe<StringQueryOperatorInput>;
   event_3_date?: Maybe<StringQueryOperatorInput>;
   event_3_address?: Maybe<StringQueryOperatorInput>;
-  event_3_description?: Maybe<StringQueryOperatorInput>;
   event_4_title?: Maybe<StringQueryOperatorInput>;
   event_4_date?: Maybe<StringQueryOperatorInput>;
   event_4_address?: Maybe<StringQueryOperatorInput>;
-  event_4_description?: Maybe<StringQueryOperatorInput>;
   our_gallery?: Maybe<StringQueryOperatorInput>;
   be_our_guest?: Maybe<StringQueryOperatorInput>;
   please_reserve_before?: Maybe<StringQueryOperatorInput>;
@@ -2576,13 +2567,16 @@ export type SitePageContextIntlMessagesFilterInput = {
   rsvp_attending?: Maybe<StringQueryOperatorInput>;
   rsvp_attending_option_1?: Maybe<StringQueryOperatorInput>;
   rsvp_attending_option_2?: Maybe<StringQueryOperatorInput>;
-  rsvp_attending_option_3?: Maybe<StringQueryOperatorInput>;
   rsvp_message?: Maybe<StringQueryOperatorInput>;
   rsvp_send?: Maybe<StringQueryOperatorInput>;
   gift_registration?: Maybe<StringQueryOperatorInput>;
   gift_registration_text?: Maybe<StringQueryOperatorInput>;
   thank_you?: Maybe<StringQueryOperatorInput>;
   for_being_with_us?: Maybe<StringQueryOperatorInput>;
+  event_1_description?: Maybe<StringQueryOperatorInput>;
+  event_2_description?: Maybe<StringQueryOperatorInput>;
+  event_3_description?: Maybe<StringQueryOperatorInput>;
+  event_4_description?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -2707,34 +2701,29 @@ export type SitePageFieldsEnum =
   | 'context___intl___messages___our_story'
   | 'context___intl___messages___story_1_title'
   | 'context___intl___messages___story_1_date'
-  | 'context___intl___messages___story_1_text'
   | 'context___intl___messages___story_2_title'
   | 'context___intl___messages___story_2_date'
-  | 'context___intl___messages___story_2_text'
   | 'context___intl___messages___story_3_title'
   | 'context___intl___messages___story_3_date'
-  | 'context___intl___messages___story_3_text'
   | 'context___intl___messages___story_4_title'
   | 'context___intl___messages___story_4_date'
-  | 'context___intl___messages___story_4_text'
+  | 'context___intl___messages___story_5_title'
+  | 'context___intl___messages___story_5_date'
+  | 'context___intl___messages___groomsmen_bridesmaid'
   | 'context___intl___messages___when_where'
   | 'context___intl___messages___see_location'
   | 'context___intl___messages___event_1_title'
   | 'context___intl___messages___event_1_date'
   | 'context___intl___messages___event_1_address'
-  | 'context___intl___messages___event_1_description'
   | 'context___intl___messages___event_2_title'
   | 'context___intl___messages___event_2_date'
   | 'context___intl___messages___event_2_address'
-  | 'context___intl___messages___event_2_description'
   | 'context___intl___messages___event_3_title'
   | 'context___intl___messages___event_3_date'
   | 'context___intl___messages___event_3_address'
-  | 'context___intl___messages___event_3_description'
   | 'context___intl___messages___event_4_title'
   | 'context___intl___messages___event_4_date'
   | 'context___intl___messages___event_4_address'
-  | 'context___intl___messages___event_4_description'
   | 'context___intl___messages___our_gallery'
   | 'context___intl___messages___be_our_guest'
   | 'context___intl___messages___please_reserve_before'
@@ -2744,13 +2733,16 @@ export type SitePageFieldsEnum =
   | 'context___intl___messages___rsvp_attending'
   | 'context___intl___messages___rsvp_attending_option_1'
   | 'context___intl___messages___rsvp_attending_option_2'
-  | 'context___intl___messages___rsvp_attending_option_3'
   | 'context___intl___messages___rsvp_message'
   | 'context___intl___messages___rsvp_send'
   | 'context___intl___messages___gift_registration'
   | 'context___intl___messages___gift_registration_text'
   | 'context___intl___messages___thank_you'
   | 'context___intl___messages___for_being_with_us'
+  | 'context___intl___messages___event_1_description'
+  | 'context___intl___messages___event_2_description'
+  | 'context___intl___messages___event_3_description'
+  | 'context___intl___messages___event_4_description'
   | 'context___intl___routed'
   | 'context___intl___originalPath'
   | 'context___intl___redirect'
@@ -2840,6 +2832,7 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___packageJson___description'
   | 'pluginCreator___packageJson___version'
   | 'pluginCreator___packageJson___main'
+  | 'pluginCreator___packageJson___author'
   | 'pluginCreator___packageJson___license'
   | 'pluginCreator___packageJson___dependencies'
   | 'pluginCreator___packageJson___dependencies___name'
@@ -3065,6 +3058,7 @@ export type SitePluginFieldsEnum =
   | 'packageJson___description'
   | 'packageJson___version'
   | 'packageJson___main'
+  | 'packageJson___author'
   | 'packageJson___license'
   | 'packageJson___dependencies'
   | 'packageJson___dependencies___name'
@@ -3107,6 +3101,7 @@ export type SitePluginPackageJson = {
   description?: Maybe<Scalars['String']>;
   version?: Maybe<Scalars['String']>;
   main?: Maybe<Scalars['String']>;
+  author?: Maybe<Scalars['String']>;
   license?: Maybe<Scalars['String']>;
   dependencies?: Maybe<Array<Maybe<SitePluginPackageJsonDependencies>>>;
   devDependencies?: Maybe<Array<Maybe<SitePluginPackageJsonDevDependencies>>>;
@@ -3147,6 +3142,7 @@ export type SitePluginPackageJsonFilterInput = {
   description?: Maybe<StringQueryOperatorInput>;
   version?: Maybe<StringQueryOperatorInput>;
   main?: Maybe<StringQueryOperatorInput>;
+  author?: Maybe<StringQueryOperatorInput>;
   license?: Maybe<StringQueryOperatorInput>;
   dependencies?: Maybe<SitePluginPackageJsonDependenciesFilterListInput>;
   devDependencies?: Maybe<SitePluginPackageJsonDevDependenciesFilterListInput>;
@@ -3325,11 +3321,6 @@ export type WeddingPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type WeddingPageQueryQuery = { profile?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixed_WithWebpFragment> }> }> };
-
-export type ProfilePageQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type ProfilePageQueryQuery = { profile?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixed_WithWebpFragment> }> }> };
 
 export type PostByPathQueryVariables = Exact<{
   path: Scalars['String'];

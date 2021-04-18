@@ -147,15 +147,12 @@ class Rsvp extends Component {
                               id: 'rsvp_attending_option_2',
                             })}
                           </option>
-                          <option value="3">
-                            {intl.formatMessage({
-                              id: 'rsvp_attending_option_3',
-                            })}
-                          </option>
                         </select>
                         <p>{error.events ? error.events : ''}</p>
                       </div>
                       <div className="col-12 col-sm-12">
+                        Qui puoi indicare anche se hai esigenze alimentari
+                        particolari
                         <textarea
                           className="contact-textarea"
                           value={notes}

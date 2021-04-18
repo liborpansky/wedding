@@ -1,10 +1,11 @@
 import React from 'react'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 import { Link } from 'gatsby'
-import strory1 from '../../images/story/1.jpg'
-import strory2 from '../../images/story/2.jpg'
-import strory3 from '../../images/story/3.jpg'
-import strory4 from '../../images/story/4.jpg'
+import story1 from '../../images/story/1.png'
+import story2 from '../../images/story/2.png'
+import story3 from '../../images/story/3.png'
+import story4 from '../../images/story/4.png'
+import story5 from '../../images/story/5.png'
 import './style.css'
 
 const Story = () => {
@@ -31,7 +32,7 @@ const Story = () => {
                     <div className="image-wrap">
                       <div className="single-image">
                         <div>
-                          <img src={strory1} alt="" />
+                          <img src={story1} alt="" />
                         </div>
                       </div>
                     </div>
@@ -41,14 +42,6 @@ const Story = () => {
                     <span className="date">
                       <FormattedMessage id="story_1_date" />
                     </span>
-                    <p>
-                      <FormattedMessage id="story_1_text" />
-                    </p>
-                    <div className="story-button">
-                      <Link className="theme-btn" to="/" title="READ MORE">
-                        <FormattedMessage id="read_more" />
-                      </Link>
-                    </div>
                   </div>
                 </div>
                 <div className="item">
@@ -59,7 +52,7 @@ const Story = () => {
                     <div className="image-wrap">
                       <div className="single-image">
                         <div>
-                          <img src={strory2} alt="" />
+                          <img src={story2} alt="" />
                         </div>
                       </div>
                     </div>
@@ -69,14 +62,6 @@ const Story = () => {
                     <span className="date">
                       <FormattedMessage id="story_2_date" />
                     </span>
-                    <p>
-                      <FormattedMessage id="story_2_text" />
-                    </p>
-                    <div className="story-button">
-                      <Link className="theme-btn" to="/" title="READ MORE">
-                        <FormattedMessage id="read_more" />
-                      </Link>
-                    </div>
                   </div>
                 </div>
                 <div className="item">
@@ -87,7 +72,7 @@ const Story = () => {
                     <div className="image-wrap">
                       <div className="single-image">
                         <div>
-                          <img src={strory3} alt="" />
+                          <img src={story3} alt="" />
                         </div>
                       </div>
                     </div>
@@ -97,14 +82,6 @@ const Story = () => {
                     <span className="date">
                       <FormattedMessage id="story_3_date" />
                     </span>
-                    <p>
-                      <FormattedMessage id="story_3_text" />
-                    </p>
-                    <div className="story-button">
-                      <Link className="theme-btn" to="/" title="READ MORE">
-                        <FormattedMessage id="read_more" />
-                      </Link>
-                    </div>
                   </div>
                 </div>
                 <div className="item">
@@ -115,7 +92,7 @@ const Story = () => {
                     <div className="image-wrap">
                       <div className="single-image">
                         <div>
-                          <img src={strory4} alt="" />
+                          <img src={story4} alt="" />
                         </div>
                       </div>
                     </div>
@@ -125,14 +102,26 @@ const Story = () => {
                     <span className="date">
                       <FormattedMessage id="story_4_date" />
                     </span>
-                    <p>
-                      <FormattedMessage id="story_4_text" />
-                    </p>
-                    <div className="story-button">
-                      <Link className="theme-btn" to="/" title="READ MORE">
-                        <FormattedMessage id="read_more" />
-                      </Link>
+                  </div>
+                </div>
+                <div className="item">
+                  <div className="story-icon">
+                    <span className="flaticon-birds-in-love"></span>
+                  </div>
+                  <div className="story-content">
+                    <div className="image-wrap">
+                      <div className="single-image">
+                        <div>
+                          <img src={story5} alt="" />
+                        </div>
+                      </div>
                     </div>
+                    <h2>
+                      <FormattedMessage id="story_5_title" />
+                    </h2>
+                    <span className="date">
+                      <FormattedMessage id="story_5_date" />
+                    </span>
                   </div>
                 </div>
               </div>

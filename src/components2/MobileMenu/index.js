@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { Collapse, CardBody, Card } from 'reactstrap'
 import { Link } from 'gatsby'
+import Language from '../language'
 import './style.css'
 
 export default class MobileMenu extends Component {
@@ -17,19 +17,15 @@ export default class MobileMenu extends Component {
     })
   }
 
-  setIsOpen = () => {
-    this.setState({
-      isOpen: !this.state.isOpen,
-    })
-  }
-
   render() {
     const { isMenuShow, isOpen } = this.state
 
     return (
       <div>
         <div className={`mobileMenu ${isMenuShow ? 'show' : ''}`}>
-          {/* <div className="clox" onClick={this.menuHandler}>Close Me</div> */}
+          <div className="clox" onClick={this.menuHandler}>
+            Close Me
+          </div>
           <div className="logo2">
             <h2>
               <Link to="/home">Libor & Martina</Link>
@@ -37,11 +33,9 @@ export default class MobileMenu extends Component {
           </div>
           <ul className="responsivemenu">
             <li>
-              <Link onClick={this.setIsOpen} to="/">
-                Home<i className="fa fa-angle-right" aria-hidden="true"></i>
-              </Link>
+              <Link to="/">Home</Link>
             </li>
-            <Collapse isOpen={isOpen}>
+            {/* <Collapse isOpen={isOpen}>
               <Card>
                 <CardBody>
                   <li>
@@ -49,7 +43,7 @@ export default class MobileMenu extends Component {
                   </li>
                 </CardBody>
               </Card>
-            </Collapse>
+            </Collapse> */}
             <li>
               <AnchorLink href="#couple">
                 <FormattedMessage id="couple" />
@@ -79,6 +73,9 @@ export default class MobileMenu extends Component {
               <AnchorLink href="#rsvp">
                 <FormattedMessage id="rsvp" />
               </AnchorLink>
+            </li>
+            <li>
+              <Language />
             </li>
           </ul>
         </div>

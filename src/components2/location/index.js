@@ -2,9 +2,10 @@ import React from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Link } from 'gatsby'
 import SectionTitle from '../section-title'
-import story1 from '../../images/events/1.jpg'
-import story2 from '../../images/events/2.jpg'
-import story3 from '../../images/events/3.jpg'
+import story1 from '../../images/events/1.png'
+import story2 from '../../images/events/2.png'
+import story3 from '../../images/events/3.png'
+import story4 from '../../images/events/4.png'
 
 import './style.css'
 
@@ -27,7 +28,7 @@ const Location = () => {
                   <h3>{intl.formatMessage({ id: 'event_1_title' })}</h3>
                   <span>{intl.formatMessage({ id: 'event_1_date' })}</span>
                   <span>{intl.formatMessage({ id: 'event_1_address' })}</span>
-                  <p>{intl.formatMessage({ id: 'event_1_description' })}</p>
+                  <p>TOGLIMI</p>
                   <Link to="/">
                     {intl.formatMessage({ id: 'see_location' })}
                   </Link>
@@ -43,7 +44,6 @@ const Location = () => {
                 <h3>{intl.formatMessage({ id: 'event_2_title' })}</h3>
                 <span>{intl.formatMessage({ id: 'event_2_date' })}</span>
                 <span>{intl.formatMessage({ id: 'event_2_address' })}</span>
-                <p>{intl.formatMessage({ id: 'event_2_description' })}</p>
                 <Link to="/">{intl.formatMessage({ id: 'see_location' })}</Link>
               </div>
             </div>
@@ -66,7 +66,6 @@ const Location = () => {
                 <h3>{intl.formatMessage({ id: 'event_3_title' })}</h3>
                 <span>{intl.formatMessage({ id: 'event_3_date' })}</span>
                 <span>{intl.formatMessage({ id: 'event_3_address' })}</span>
-                <p>{intl.formatMessage({ id: 'event_3_description' })}</p>
                 <Link to="/">{intl.formatMessage({ id: 'see_location' })}</Link>
               </div>
             </div>
@@ -79,13 +78,12 @@ const Location = () => {
                 <h3>{intl.formatMessage({ id: 'event_4_title' })}</h3>
                 <span>{intl.formatMessage({ id: 'event_4_date' })}</span>
                 <span>{intl.formatMessage({ id: 'event_4_address' })}</span>
-                <p>{intl.formatMessage({ id: 'event_4_description' })}</p>
                 <Link to="/">{intl.formatMessage({ id: 'see_location' })}</Link>
               </div>
             </div>
             <div className="col-lg-5">
               <div className="ceromony-img">
-                <img src={story2} alt="" />
+                <img src={story4} alt="" />
               </div>
             </div>
           </div>

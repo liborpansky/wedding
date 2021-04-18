@@ -68,7 +68,6 @@ const Header: React.FC<Props> = ({ location, title }: Props) => {
                       {intl.formatMessage({ id: 'rsvp' })}
                     </AnchorLink>
                   </li>
-
                   <li>
                     <Language />
                   </li>

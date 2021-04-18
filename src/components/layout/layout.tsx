@@ -9,7 +9,10 @@ import 'modern-normalize/modern-normalize.css'
 import 'prismjs/themes/prism.css'
 import 'scss/gatstrap.scss'
 import 'animate.css/animate.css'
-import 'font-awesome/css/font-awesome.css'
+// import 'font-awesome/css/font-awesome.css'
+import '../../css/font-awesome.min.css'
+import '../../css/flaticon.css'
+import '../../css/responsive.css'
 
 interface Props {
   children?: React.ReactNode

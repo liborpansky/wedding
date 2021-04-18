@@ -7,9 +7,9 @@ import Scrollbar from '../../components2/scrollbar'
 import './layout.css'
 
 // import './index.css'
-import '../../css/font-awesome.min.css'
-import '../../css/flaticon.css'
-import '../../css/responsive.css'
+// import '../../css/font-awesome.min.css'
+// import '../../css/flaticon.css'
+// import '../../css/responsive.css'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 
 interface Props {
