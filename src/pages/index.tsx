@@ -32,7 +32,7 @@ const Wedding: React.FC<Props> = ({ location, data }: Props) => {
     <Layout location={location}>
       <Navbar title={siteMetadata.title} location={location} />
       <PreviewHero />
-      <Saveday />
+      {/* <Saveday /> */}
       <Couple2 />
       <Welcome />
       <Story />
