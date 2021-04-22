@@ -1,5 +1,7 @@
 export type Maybe<T> = T | null;
-export type Exact<T extends { [key: string]: any }> = { [K in keyof T]: T[K] };
+export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -170,7 +172,7 @@ export type DirectoryEdge = {
   previous?: Maybe<Directory>;
 };
 
-export type DirectoryFieldsEnum = 
+export type DirectoryFieldsEnum =
   | 'sourceInstanceName'
   | 'absolutePath'
   | 'relativePath'
@@ -480,7 +482,7 @@ export type FileEdge = {
   previous?: Maybe<File>;
 };
 
-export type FileFieldsEnum = 
+export type FileFieldsEnum =
   | 'sourceInstanceName'
   | 'absolutePath'
   | 'relativePath'
@@ -697,6 +699,9 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___date'
   | 'childMarkdownRemark___frontmatter___layout'
   | 'childMarkdownRemark___frontmatter___path'
+  | 'childMarkdownRemark___frontmatter___category'
+  | 'childMarkdownRemark___frontmatter___tags'
+  | 'childMarkdownRemark___frontmatter___description'
   | 'childMarkdownRemark___frontmatter___image___sourceInstanceName'
   | 'childMarkdownRemark___frontmatter___image___absolutePath'
   | 'childMarkdownRemark___frontmatter___image___relativePath'
@@ -733,9 +738,6 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___image___publicURL'
   | 'childMarkdownRemark___frontmatter___image___id'
   | 'childMarkdownRemark___frontmatter___image___children'
-  | 'childMarkdownRemark___frontmatter___description'
-  | 'childMarkdownRemark___frontmatter___category'
-  | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -857,7 +859,7 @@ export type FloatQueryOperatorInput = {
   nin?: Maybe<Array<Maybe<Scalars['Float']>>>;
 };
 
-export type ImageCropFocus = 
+export type ImageCropFocus =
   | 'CENTER'
   | 'NORTH'
   | 'NORTHEAST'
@@ -870,14 +872,14 @@ export type ImageCropFocus =
   | 'ENTROPY'
   | 'ATTENTION';
 
-export type ImageFit = 
+export type ImageFit =
   | 'COVER'
   | 'CONTAIN'
   | 'FILL'
   | 'INSIDE'
   | 'OUTSIDE';
 
-export type ImageFormat = 
+export type ImageFormat =
   | 'NO_CHANGE'
   | 'JPG'
   | 'PNG'
@@ -1044,7 +1046,7 @@ export type ImageSharpEdge = {
   previous?: Maybe<ImageSharp>;
 };
 
-export type ImageSharpFieldsEnum = 
+export type ImageSharpFieldsEnum =
   | 'fixed___base64'
   | 'fixed___tracedSVG'
   | 'fixed___aspectRatio'
@@ -1397,7 +1399,7 @@ export type JsonQueryOperatorInput = {
   glob?: Maybe<Scalars['JSON']>;
 };
 
-export type MarkdownExcerptFormats = 
+export type MarkdownExcerptFormats =
   | 'PLAIN'
   | 'HTML'
   | 'MARKDOWN';
@@ -1418,7 +1420,7 @@ export type MarkdownHeadingFilterListInput = {
   elemMatch?: Maybe<MarkdownHeadingFilterInput>;
 };
 
-export type MarkdownHeadingLevels = 
+export type MarkdownHeadingLevels =
   | 'h1'
   | 'h2'
   | 'h3'
@@ -1497,12 +1499,15 @@ export type MarkdownRemarkEdge = {
   previous?: Maybe<MarkdownRemark>;
 };
 
-export type MarkdownRemarkFieldsEnum = 
+export type MarkdownRemarkFieldsEnum =
   | 'id'
   | 'frontmatter___title'
   | 'frontmatter___date'
   | 'frontmatter___layout'
   | 'frontmatter___path'
+  | 'frontmatter___category'
+  | 'frontmatter___tags'
+  | 'frontmatter___description'
   | 'frontmatter___image___sourceInstanceName'
   | 'frontmatter___image___absolutePath'
   | 'frontmatter___image___relativePath'
@@ -1564,9 +1569,6 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___image___childMarkdownRemark___timeToRead'
   | 'frontmatter___image___childMarkdownRemark___tableOfContents'
   | 'frontmatter___image___childMarkdownRemark___children'
-  | 'frontmatter___description'
-  | 'frontmatter___category'
-  | 'frontmatter___tags'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -1691,10 +1693,10 @@ export type MarkdownRemarkFrontmatter = {
   date?: Maybe<Scalars['Date']>;
   layout?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
-  image?: Maybe<File>;
-  description?: Maybe<Scalars['String']>;
   category?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
+  description?: Maybe<Scalars['String']>;
+  image?: Maybe<File>;
 };
 
 
@@ -1710,10 +1712,10 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   date?: Maybe<DateQueryOperatorInput>;
   layout?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
-  image?: Maybe<FileFilterInput>;
-  description?: Maybe<StringQueryOperatorInput>;
   category?: Maybe<StringQueryOperatorInput>;
   tags?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<FileFilterInput>;
 };
 
 export type MarkdownRemarkGroupConnection = {
@@ -1783,7 +1785,7 @@ export type Potrace = {
   background?: Maybe<Scalars['String']>;
 };
 
-export type PotraceTurnPolicy = 
+export type PotraceTurnPolicy =
   | 'TURNPOLICY_BLACK'
   | 'TURNPOLICY_WHITE'
   | 'TURNPOLICY_LEFT'
@@ -2122,7 +2124,7 @@ export type SiteBuildMetadataEdge = {
   previous?: Maybe<SiteBuildMetadata>;
 };
 
-export type SiteBuildMetadataFieldsEnum = 
+export type SiteBuildMetadataFieldsEnum =
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2260,7 +2262,7 @@ export type SiteEdge = {
   previous?: Maybe<Site>;
 };
 
-export type SiteFieldsEnum = 
+export type SiteFieldsEnum =
   | 'buildTime'
   | 'siteMetadata___title'
   | 'siteMetadata___description'
@@ -2462,8 +2464,6 @@ export type SitePageContextIntlMessages = {
   we_are_waiting?: Maybe<Scalars['String']>;
   the_big_day?: Maybe<Scalars['String']>;
   happy_couple?: Maybe<Scalars['String']>;
-  martina_description?: Maybe<Scalars['String']>;
-  libor_description?: Maybe<Scalars['String']>;
   welcome_big_day?: Maybe<Scalars['String']>;
   welcome_text?: Maybe<Scalars['String']>;
   read_more?: Maybe<Scalars['String']>;
@@ -2527,8 +2527,6 @@ export type SitePageContextIntlMessagesFilterInput = {
   we_are_waiting?: Maybe<StringQueryOperatorInput>;
   the_big_day?: Maybe<StringQueryOperatorInput>;
   happy_couple?: Maybe<StringQueryOperatorInput>;
-  martina_description?: Maybe<StringQueryOperatorInput>;
-  libor_description?: Maybe<StringQueryOperatorInput>;
   welcome_big_day?: Maybe<StringQueryOperatorInput>;
   welcome_text?: Maybe<StringQueryOperatorInput>;
   read_more?: Maybe<StringQueryOperatorInput>;
@@ -2585,7 +2583,7 @@ export type SitePageEdge = {
   previous?: Maybe<SitePage>;
 };
 
-export type SitePageFieldsEnum = 
+export type SitePageFieldsEnum =
   | 'path'
   | 'component'
   | 'internalComponentName'
@@ -2693,8 +2691,6 @@ export type SitePageFieldsEnum =
   | 'context___intl___messages___we_are_waiting'
   | 'context___intl___messages___the_big_day'
   | 'context___intl___messages___happy_couple'
-  | 'context___intl___messages___martina_description'
-  | 'context___intl___messages___libor_description'
   | 'context___intl___messages___welcome_big_day'
   | 'context___intl___messages___welcome_text'
   | 'context___intl___messages___read_more'
@@ -2921,7 +2917,7 @@ export type SitePluginEdge = {
   previous?: Maybe<SitePlugin>;
 };
 
-export type SitePluginFieldsEnum = 
+export type SitePluginFieldsEnum =
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -3304,7 +3300,7 @@ export type SiteSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type SortOrderEnum = 
+export type SortOrderEnum =
   | 'ASC'
   | 'DESC';
 

@@ -1,5 +1,5 @@
 .footer-area {
-  background: url(../../images/footer/1.jpg) no-repeat center center / cover;
+  background: url(../../images/footer/2.png) no-repeat center right / cover;
   padding: 100px 0;
   position: relative;
   z-index: 1;
@@ -42,7 +42,7 @@
 
 .content-sub h2 {
   font-size: 80px;
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Playlist', cursive;
   color: #fff;
 }
 

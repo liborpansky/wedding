@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes|Muli:300,400,500,600,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Montez'); */
+
+@font-face {
+  font-family: 'Playlist';
+  src: local('Playlist'),
+    url(../../fonts/Playlist Script.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Halimun';
+  src: local('Halimun'), url(../../fonts/Halimun.ttf) format('opentype');
+}
 
 h1,
 h2,
 h3 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Playlist', cursive;
 }
 body {
   font-family: 'Muli', sans-serif;
@@ -79,7 +91,7 @@ img {
   opacity: 1;
   left: 0;
   width: 100%;
-  background: #1e7b67;
+  background: #fff;
   border: none;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
@@ -90,12 +102,29 @@ img {
   background: #231b0e;
 }
 
+.header ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .pb-70 {
   padding-bottom: 90px !important;
 }
 
+.fixed-navbar.active .header .logo h2 a {
+  color: #000;
+}
+
+.fixed-navbar.active .header .logo h2 a span {
+  color: #d99489;
+}
+
+.fixed-navbar.active .header ul li a {
+  color: #495057;
+}
+
 .fixed-navbar.active .header ul li a:hover {
-  color: #fff;
+  color: #d99489;
 }
 
 .fixed-navbar.active .header ul li ul li a:hover {

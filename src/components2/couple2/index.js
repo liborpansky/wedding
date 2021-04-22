@@ -25,9 +25,6 @@ const Couple2 = () => {
                 <div className="couple-text">
                   <div className="couple-content">
                     <h4>MARTINA Longo &amp; LIBOR Pansky</h4>
-                    <p>
-                      <FormattedMessage id="martina_description" />
-                    </p>
                   </div>
                 </div>
               </div>

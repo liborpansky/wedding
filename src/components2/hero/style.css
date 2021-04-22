@@ -4,14 +4,15 @@
 
 .slick-dots li button:before {
     font-size: 14px;
-    color: #649e93;
+    color: #1e70a0;
 }
 .slick-dots li.slick-active button:before{
-    color: #649e93;
+    color: #1e70a0;
 }
 
 .item1{
-    background: url(../../images/slider/1.jpg);
+    background: url(../../images/slider/slide4.png);
+    background-position: bottom;
     height: 950px;
     display: flex!important;
     justify-content: center;

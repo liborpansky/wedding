@@ -67,7 +67,7 @@
   .page-title .breadcrumb li {
     font-size: 16px;
     font-size: 1rem;
-    color:#649e93;
+    color:#1e70a0;
     margin-right: 5px;
     position: relative;
   }
@@ -88,7 +88,7 @@
   }
   
   .page-title .breadcrumb li a:hover {
-    color:#649e93;
+    color:#1e70a0;
   }
   
   .page-title .breadcrumb > li + li {
