@@ -28,10 +28,15 @@ const Location = () => {
                   <h3>{intl.formatMessage({ id: 'event_1_title' })}</h3>
                   <span>{intl.formatMessage({ id: 'event_1_date' })}</span>
                   <span>{intl.formatMessage({ id: 'event_1_address' })}</span>
-                  <p>TOGLIMI</p>
-                  <Link to="/">
-                    {intl.formatMessage({ id: 'see_location' })}
-                  </Link>
+                  <p>
+                    <a
+                      href="https://goo.gl/maps/eqHnrbJJST6GWijN9"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {intl.formatMessage({ id: 'see_location' })}
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -44,7 +49,15 @@ const Location = () => {
                 <h3>{intl.formatMessage({ id: 'event_2_title' })}</h3>
                 <span>{intl.formatMessage({ id: 'event_2_date' })}</span>
                 <span>{intl.formatMessage({ id: 'event_2_address' })}</span>
-                <Link to="/">{intl.formatMessage({ id: 'see_location' })}</Link>
+                <p>
+                  <a
+                    href="https://goo.gl/maps/wJKaKomaKw8uR8kBA"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {intl.formatMessage({ id: 'see_location' })}
+                  </a>
+                </p>
               </div>
             </div>
             <div className="col-lg-5">
@@ -66,7 +79,15 @@ const Location = () => {
                 <h3>{intl.formatMessage({ id: 'event_3_title' })}</h3>
                 <span>{intl.formatMessage({ id: 'event_3_date' })}</span>
                 <span>{intl.formatMessage({ id: 'event_3_address' })}</span>
-                <Link to="/">{intl.formatMessage({ id: 'see_location' })}</Link>
+                <p>
+                  <a
+                    href="https://goo.gl/maps/xZaWZG9zW4xeeJGB6"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {intl.formatMessage({ id: 'see_location' })}
+                  </a>
+                </p>
               </div>
             </div>
           </div>
@@ -78,7 +99,15 @@ const Location = () => {
                 <h3>{intl.formatMessage({ id: 'event_4_title' })}</h3>
                 <span>{intl.formatMessage({ id: 'event_4_date' })}</span>
                 <span>{intl.formatMessage({ id: 'event_4_address' })}</span>
-                <Link to="/">{intl.formatMessage({ id: 'see_location' })}</Link>
+                <p>
+                  <a
+                    href="https://goo.gl/maps/xZaWZG9zW4xeeJGB6"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {intl.formatMessage({ id: 'see_location' })}
+                  </a>
+                </p>
               </div>
             </div>
             <div className="col-lg-5">

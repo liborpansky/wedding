@@ -45,12 +45,18 @@ class Gift extends Component {
               <h2>
                 <FormattedMessage id="gift_registration" />
               </h2>
-              <p>
+              <h5>
                 <FormattedMessage id="gift_registration_text" />
-              </p>
-              <p>INTESTATARIO: Martina Longo</p>
-              <p>IBAN: IT02A0306979494100000000912</p>
-              <p>Swift: IBSPITNA160</p>
+              </h5>
+              <div className="pt-4">
+                <b>INTESTATARIO:</b> Martina Longo
+              </div>
+              <div>
+                <b>IBAN:</b> IT02A0306979494100000000912
+              </div>
+              <div className="pb-5">
+                <b>Swift:</b> IBSPITNA160
+              </div>
             </div>
           </div>
         </div>

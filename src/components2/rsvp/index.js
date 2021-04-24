@@ -124,6 +124,8 @@ class Rsvp extends Component {
                           <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
                         </select>
                         <p>{error.rsvp ? error.rsvp : ''}</p>
                       </div>
@@ -151,7 +153,7 @@ class Rsvp extends Component {
                         <p>{error.events ? error.events : ''}</p>
                       </div>
                       <div className="col-12 col-sm-12">
-                        Qui puoi indicare anche se hai esigenze alimentari
+                        Qui sotto puoi indicare anche se hai esigenze alimentari
                         particolari
                         <textarea
                           className="contact-textarea"
