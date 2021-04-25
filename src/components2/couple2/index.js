@@ -1,6 +1,6 @@
 import React from 'react'
 import { FormattedMessage } from 'gatsby-plugin-intl'
-import couple from '../../images/couple/1.jpg'
+import couple from '../../images/couple/1_res.jpg'
 import './style.css'
 
 const Couple2 = () => {

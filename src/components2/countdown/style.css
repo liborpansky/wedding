@@ -36,7 +36,7 @@
     line-height: 1.4;
     margin-bottom: 0;
     color: #fff;
-    font-family: 'Playlist', cursive;
+    font-family: 'Montez', cursive;
 }
 
 @media (max-width:767px){
@@ -48,7 +48,7 @@
 
 
 .count-down-section h2 {
-    font-family: "Playlist", cursive;
+    font-family: "Montez", cursive;
     font-size: 60px;
     color: #fff;
     margin: 0;

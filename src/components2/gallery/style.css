@@ -27,7 +27,7 @@
 .gallery-img:hover .image-box img {
   transform: none;
 }
-.step-immage {
+.step-image {
   height: 100px;
   width: 100px;
 }

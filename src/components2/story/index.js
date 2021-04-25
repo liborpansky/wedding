@@ -1,11 +1,10 @@
 import React from 'react'
 import { FormattedMessage } from 'gatsby-plugin-intl'
-import { Link } from 'gatsby'
-import story1 from '../../images/story/1.png'
-import story2 from '../../images/story/2.png'
-import story3 from '../../images/story/3.png'
-import story4 from '../../images/story/4.png'
-import story5 from '../../images/story/5.png'
+import story1 from '../../images/story/1.jpg'
+import story2 from '../../images/story/2.jpg'
+import story3 from '../../images/story/3.jpg'
+import story4 from '../../images/story/4.jpg'
+import story5 from '../../images/story/5.jpg'
 import './style.css'
 
 const Story = () => {

@@ -2494,6 +2494,7 @@ export type SitePageContextIntlMessages = {
   event_4_date?: Maybe<Scalars['String']>;
   event_4_address?: Maybe<Scalars['String']>;
   our_gallery?: Maybe<Scalars['String']>;
+  available_google_play?: Maybe<Scalars['String']>;
   be_our_guest?: Maybe<Scalars['String']>;
   please_reserve_before?: Maybe<Scalars['String']>;
   rsvp_name?: Maybe<Scalars['String']>;
@@ -2557,6 +2558,7 @@ export type SitePageContextIntlMessagesFilterInput = {
   event_4_date?: Maybe<StringQueryOperatorInput>;
   event_4_address?: Maybe<StringQueryOperatorInput>;
   our_gallery?: Maybe<StringQueryOperatorInput>;
+  available_google_play?: Maybe<StringQueryOperatorInput>;
   be_our_guest?: Maybe<StringQueryOperatorInput>;
   please_reserve_before?: Maybe<StringQueryOperatorInput>;
   rsvp_name?: Maybe<StringQueryOperatorInput>;
@@ -2721,6 +2723,7 @@ export type SitePageFieldsEnum =
   | 'context___intl___messages___event_4_date'
   | 'context___intl___messages___event_4_address'
   | 'context___intl___messages___our_gallery'
+  | 'context___intl___messages___available_google_play'
   | 'context___intl___messages___be_our_guest'
   | 'context___intl___messages___please_reserve_before'
   | 'context___intl___messages___rsvp_name'

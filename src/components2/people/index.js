@@ -3,7 +3,7 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { Link } from 'gatsby'
 import SectionTitle from '../section-title'
 import groomsman from '../../images/groomsmen-bridesmaid/1.jpg'
-import bridesmaid from '../../images/groomsmen-bridesmaid/2.png'
+import bridesmaid from '../../images/groomsmen-bridesmaid/2.jpg'
 
 import './style.css'
 

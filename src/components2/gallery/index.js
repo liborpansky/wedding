@@ -10,6 +10,10 @@ import trombetta from '../../images/gal/trombetta.png'
 class Gallery extends Component {
   render() {
     const { intl } = this.props
+    const googlePlayImg =
+      intl.locale === 'it'
+        ? 'https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png'
+        : 'https://play.google.com/intl/en_us/badges/static/images/badges/cs_badge_web_generic.png'
     return (
       <div id="gallery" className="Gallery-section section-padding pb-70">
         <SectionTitle section={intl.formatMessage({ id: 'our_gallery' })} />
@@ -26,7 +30,7 @@ class Gallery extends Component {
           <div className="row pt-5">
             <div className="col-xs-12 col-lg-4">
               <div>
-                <img src={step1} alt="" className="step-immage" />
+                <img src={step1} alt="" className="step-image" />
               </div>
               <p className="pt-4">
                 <b>Installa l&apos;applicazione</b>
@@ -54,14 +58,12 @@ class Gallery extends Component {
                 <div className="col-xs-12 col-md-6">
                   <a
                     rel="noreferrer"
-                    className="wedshoots-steps-button android"
-                    href="https://app.appsflyer.com/net.bodas.android.wedshoots?pid=WP-Android-IT&amp;c=WP-IT-LANDINGS"
+                    href="https://play.google.com/store/apps/details?id=net.bodas.android.wedshoots&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
                     target="_blank"
                   >
                     <img
-                      src="https://cdn1.matrimonio.com/assets/img/footer/googleplay.png"
-                      srcSet="https://cdn1.matrimonio.com/assets/img/footer/googleplay@2x.png 2x"
-                      loading="lazy"
+                      alt={intl.formatMessage({ id: 'available_google_play' })}
+                      src={googlePlayImg}
                     />
                   </a>
                 </div>
@@ -70,7 +72,7 @@ class Gallery extends Component {
 
             <div className="col-xs-12 col-lg-4">
               <div>
-                <img src={step2} alt="" className="step-immage" />
+                <img src={step2} alt="" className="step-image" />
               </div>
               <p className="pt-4">
                 <b>Accedi all&apos;album</b>
@@ -87,7 +89,7 @@ class Gallery extends Component {
 
             <div className="col-xs-12 col-lg-4">
               <div>
-                <img src={step3} alt="" className="step-immage" />
+                <img src={step3} alt="" className="step-image" />
               </div>
               <p className="pt-4">
                 <b>Divertiti</b>

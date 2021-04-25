@@ -1,7 +1,7 @@
 import React from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
 import Particles from 'react-particles-js'
-import stockShape2 from '../../images/hero/icon.png'
+import heart from '../../images/hero/icon.png'
 import './style.css'
 
 const PreviewHero = () => {
@@ -44,82 +44,82 @@ const PreviewHero = () => {
               type: ['images', 'circle'],
               images: [
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 13,
                   width: 15,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 20,
                   width: 20,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 2,
                   width: 46,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 29,
                   width: 33,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 10,
                   width: 12,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 21,
                   width: 22,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 21,
                   width: 22,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 5,
                   width: 7,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 13,
                   width: 15,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 20,
                   width: 20,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 2,
                   width: 46,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 29,
                   width: 33,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 10,
                   width: 12,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 21,
                   width: 22,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 21,
                   width: 22,
                 },
                 {
-                  src: `${stockShape2}`,
+                  src: `${heart}`,
                   height: 5,
                   width: 7,
                 },
