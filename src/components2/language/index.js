@@ -1,5 +1,8 @@
 import React from 'react'
 import { IntlContextConsumer, changeLocale } from 'gatsby-plugin-intl'
+import itFlag from '../../images/flags/it.png'
+import czFlag from '../../images/flags/cz.png'
+import './style.css'
 
 const languageName = {
   it: 'Italiano',
@@ -11,20 +14,26 @@ const Language = () => {
     <div>
       <IntlContextConsumer>
         {({ languages, language: currentLocale }) =>
-          languages.map((language) => (
-            <a
-              key={language}
-              onClick={() => changeLocale(language)}
-              style={{
-                color: currentLocale === language ? `yellow` : `white`,
-                margin: 10,
-                textDecoration: `underline`,
-                cursor: `pointer`,
-              }}
-            >
-              {languageName[language]}
-            </a>
-          ))
+          languages
+            .filter((x) => x !== currentLocale)
+            .map((language) => (
+              <a
+                key={language}
+                onClick={() => changeLocale(language)}
+                style={{
+                  margin: 10,
+                  textDecoration: `underline`,
+                  cursor: `pointer`,
+                }}
+              >
+                <img
+                  className="flag"
+                  src={currentLocale === 'it' ? czFlag : itFlag}
+                  alt="Cambia lingua"
+                />
+                {/* {languageName[language]} */}
+              </a>
+            ))
         }
       </IntlContextConsumer>
     </div>

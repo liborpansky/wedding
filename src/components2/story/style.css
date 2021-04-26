@@ -103,7 +103,7 @@ Story-Area
 }
 .story a.story-btn {
   font-weight: 500;
-  color: #1e70a0;
+  color: #5e9a8d;
   text-transform: uppercase;
   font-size: 17px;
 }
@@ -173,7 +173,7 @@ Story-Area
   margin-bottom: 2px;
   font-family: 'Montez', cursive;
   font-size: 40px;
-  color: #1e70a0;
+  color: #5e9a8d;
 }
 .story-area.story-style-2 .story .story-content h2 {
   margin-bottom: 2px;
@@ -221,7 +221,7 @@ Story-Area
   background: #fff;
   content: '\f108';
   font-family: 'Flaticon';
-  border: 5px solid #dae2e6;
+  border: 5px solid #d9ece7;
 }
 .story-area.story-style-2 .story .story-icon {
   position: absolute;
@@ -242,7 +242,7 @@ Story-Area
 .story-icon span:before {
   font-size: 30px;
   line-height: 30px;
-  color: #1e70a0;
+  color: #5e9a8d;
 }
 .story-area.story-style-2 .story-icon span:before {
   color: #9a8c40;

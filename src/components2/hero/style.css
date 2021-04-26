@@ -4,10 +4,10 @@
 
 .slick-dots li button:before {
   font-size: 14px;
-  color: #1e70a0;
+  color: #5e9a8d;
 }
 .slick-dots li.slick-active button:before {
-  color: #1e70a0;
+  color: #5e9a8d;
 }
 
 .item1 {

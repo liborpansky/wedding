@@ -22,7 +22,7 @@ const Header: React.FC<Props> = ({ location, title }: Props) => {
             <div className="col-lg-3 col-10">
               <div className="logo">
                 <h2>
-                  <Link to="/home">
+                  <Link to="/">
                     Libor
                     <span>
                       <i className="fa fa-heart" aria-hidden="true"></i>

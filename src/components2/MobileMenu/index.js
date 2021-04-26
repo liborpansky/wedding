@@ -28,7 +28,7 @@ export default class MobileMenu extends Component {
           </div>
           <div className="logo2">
             <h2>
-              <Link to="/home">Libor & Martina</Link>
+              <Link to="/">Libor & Martina</Link>
             </h2>
           </div>
           <ul className="responsivemenu">

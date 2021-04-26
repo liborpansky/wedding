@@ -30,7 +30,7 @@ const Location = () => {
                   <span>{intl.formatMessage({ id: 'event_1_address' })}</span>
                   <p>
                     <a
-                      href="https://goo.gl/maps/eqHnrbJJST6GWijN9"
+                      href="https://goo.gl/maps/SY98rPc2zu2E1s7t5"
                       target="_blank"
                       rel="noreferrer"
                     >
