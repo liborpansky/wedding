@@ -5,10 +5,10 @@ import React from 'react'
 import { WeddingPageQueryQuery } from '../../types/graphql-types'
 import { siteMetadata } from '../../gatsby-config'
 // import Layout from '../components/layout/layout'
-import Meta from '../components/meta/meta'
+// import Meta from '../components/meta/meta'
 
 import Layout from '../components2/layout/layout'
-import Couple2 from '../components2/couple2'
+import Couple from '../components2/couple'
 import PreviewHero from '../components2/hero'
 import Story from '../components2/story'
 import Welcome from '../components2/welcome-area'
@@ -26,14 +26,14 @@ interface Props {
 }
 
 const Wedding: React.FC<Props> = ({ location, data }: Props) => {
-  const profile = data.profile?.childImageSharp?.fixed
+  // const profile = data.profile?.childImageSharp?.fixed
 
   return (
     <Layout location={location}>
       <Navbar title={siteMetadata.title} location={location} />
       <PreviewHero />
-      {/* <Saveday /> */}
-      <Couple2 />
+      <Saveday />
+      <Couple />
       <Welcome />
       <Story />
       <People />

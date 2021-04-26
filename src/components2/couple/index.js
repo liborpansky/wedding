@@ -1,105 +1,30 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import SectionTitle from '../section-title'
-import couple1 from '../../images/couple/img-1.jpg'
-import couple2 from '../../images/couple/img-2.png'
-import couple3 from '../../images/couple/2.png'
+import { FormattedMessage } from 'gatsby-plugin-intl'
+import couple from '../../images/couple/1_res.jpg'
 import './style.css'
 
-const Couple = () => {
+const Couple2 = () => {
   return (
-    <div id="couple" className="about-wrap">
-      <div className="couple-area section-padding pb-70">
-        <SectionTitle section={'Happy Couple'} />
-        <div className="container">
-          <div className="couple-wrap">
-            <div className="row">
-              <div className="col-lg-5 col-md-12 col-sm-12 couple-single">
-                <div className="couple-wrap couple-wrap-2">
-                  <div className="couple-img">
-                    <img src={couple1} alt="thumb" />
-                  </div>
-                  <div className="couple-text">
-                    <div className="couple-content">
-                      <h3>Martina LONGO</h3>
-                      <p>
-                        Hi I am Martina Longo. I am going to introduce myself.I
-                        am a professional graphic designer professional graphic
-                        designer going to introduce myself.I am going to
-                        introduce myself.
-                      </p>
-                    </div>
-                    <div className="social-icon">
-                      <ul className="d-flex">
-                        <li>
-                          <Link to="/">
-                            <span className="fa fa-facebook"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/">
-                            <span className="fa fa-twitter"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/">
-                            <span className="fa fa-google-plus"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/">
-                            <span className="fa fa-linkedin"></span>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+    <div id="couple" className="couple-area section-padding pb-70">
+      <div className="container">
+        <div className="col-l2">
+          <div className="section-title text-center">
+            <h2>
+              <FormattedMessage id="happy_couple" />
+            </h2>
+          </div>
+        </div>
+
+        <div className="couple-wrap">
+          <div className="row">
+            <div className="col-md-6 offset-md-3 couple-single">
+              <div className="couple-wrap2">
+                <div className="couple-img3">
+                  <img src={couple} alt="" />
                 </div>
-              </div>
-              <div className="col-lg-2 couple-single">
-                <div className="couple-shape">
-                  <img src={couple3} alt="shape" />
-                </div>
-              </div>
-              <div className="col-lg-5 col-md-12 col-sm-12 couple-single">
-                <div className="couple-wrap couple-wrap-3">
-                  <div className="couple-img couple-img-2">
-                    <img src={couple2} alt="thumb" />
-                  </div>
-                  <div className="couple-text">
-                    <div className="couple-content">
-                      <h3>Libor PANSKY</h3>
-                      <p>
-                        Hi I am Libor Pansky. I am going to introduce myself. I
-                        am a professional graphic designer professional graphic
-                        designer going to introduce myself. I am going to
-                        introduce myself.
-                      </p>
-                    </div>
-                    <div className="social-icon">
-                      <ul className="d-flex">
-                        <li>
-                          <Link to="/">
-                            <span className="fa fa-facebook"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/">
-                            <span className="fa fa-twitter"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/">
-                            <span className="fa fa-google-plus"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/">
-                            <span className="fa fa-linkedin"></span>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
+                <div className="couple-text">
+                  <div className="couple-content">
+                    <h4>MARTINA Longo &amp; LIBOR Pansky</h4>
                   </div>
                 </div>
               </div>
@@ -111,4 +36,4 @@ const Couple = () => {
   )
 }
 
-export default Couple
+export default Couple2
