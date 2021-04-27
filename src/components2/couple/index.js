@@ -5,7 +5,7 @@ import './style.css'
 
 const Couple2 = () => {
   return (
-    <div id="couple" className="couple-area section-padding pb-70">
+    <div id="couple" className="couple-area pb-70">
       <div className="container">
         <div className="col-l2">
           <div className="section-title text-center">
