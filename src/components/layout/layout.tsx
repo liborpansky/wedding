@@ -7,7 +7,7 @@ import { siteMetadata } from '../../../gatsby-config'
 
 import 'modern-normalize/modern-normalize.css'
 import 'prismjs/themes/prism.css'
-import 'scss/gatstrap.scss'
+import 'scss/template.scss'
 import 'animate.css/animate.css'
 // import 'font-awesome/css/font-awesome.css'
 import '../../css/font-awesome.min.css'

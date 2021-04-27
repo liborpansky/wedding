@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
-    title: 'Gatstrap',
-    description: 'Gatsby starter for bootstrap a blog',
-    siteUrl: 'https://gatstrap.netlify.com',
-    author: 'jaxx2104',
-    twitter: 'jaxx2104',
+    title: 'Libor and Martina',
+    description: 'Libor and Martina Wedding Site',
+    siteUrl: 'https://libormartina.com',
+    author: 'liborpansky',
+    twitter: 'liborpansky',
     adsense: '',
   },
   pathPrefix: '/',
@@ -51,10 +51,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatstrap',
-        short_name: 'Gatstrap',
-        description: 'Gatsby starter for bootstrap a blog',
-        homepage_url: 'https://gatstrap.netlify.com',
+        name: 'Libor and Martina Wedding Site',
+        short_name: 'Libor and Martina',
+        description: 'Libor and Martina Wedding Site',
+        homepage_url: 'https://libormartina.com',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#fff',
