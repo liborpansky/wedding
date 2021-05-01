@@ -55,5 +55,9 @@
   "gift_registration": "Il vostro pensiero",
   "gift_registration_text": "Il dono più bello che possiate farci è essere con noi nel nostro grande giorno. Ma se desiderate farci un regalo, abbiamo tanti sogni nel casseto che ci farebbe piacere realizzare.",
   "thank_you": "Grazie",
-  "for_being_with_us": "di cuore"
+  "for_being_with_us": "di cuore",
+  "days": "{count, plural, =0 {Giorni} one {Giorno} other {Giorni}}",
+  "hours": "{count, plural, =0 {Ore} one {Ora} other {Ore}}",
+  "minutes": "{count, plural, =0 {Minuti} one {Minuto} other {Minuti}}",
+  "seconds": "{count, plural, =0 {Secondi} one {Secondo} other {Secondi}}"
 }

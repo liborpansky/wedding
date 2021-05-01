@@ -375,6 +375,10 @@ export type SitePageContextIntlMessages = {
   gift_registration_text?: Maybe<Scalars['String']>;
   thank_you?: Maybe<Scalars['String']>;
   for_being_with_us?: Maybe<Scalars['String']>;
+  days?: Maybe<Scalars['String']>;
+  hours?: Maybe<Scalars['String']>;
+  minutes?: Maybe<Scalars['String']>;
+  seconds?: Maybe<Scalars['String']>;
   event_1_description?: Maybe<Scalars['String']>;
   event_2_description?: Maybe<Scalars['String']>;
   event_3_description?: Maybe<Scalars['String']>;
@@ -2310,6 +2314,10 @@ export type SitePageContextIntlMessagesFilterInput = {
   gift_registration_text?: Maybe<StringQueryOperatorInput>;
   thank_you?: Maybe<StringQueryOperatorInput>;
   for_being_with_us?: Maybe<StringQueryOperatorInput>;
+  days?: Maybe<StringQueryOperatorInput>;
+  hours?: Maybe<StringQueryOperatorInput>;
+  minutes?: Maybe<StringQueryOperatorInput>;
+  seconds?: Maybe<StringQueryOperatorInput>;
   event_1_description?: Maybe<StringQueryOperatorInput>;
   event_2_description?: Maybe<StringQueryOperatorInput>;
   event_3_description?: Maybe<StringQueryOperatorInput>;
@@ -2646,6 +2654,10 @@ export type SitePageFieldsEnum =
   | 'context___intl___messages___gift_registration_text'
   | 'context___intl___messages___thank_you'
   | 'context___intl___messages___for_being_with_us'
+  | 'context___intl___messages___days'
+  | 'context___intl___messages___hours'
+  | 'context___intl___messages___minutes'
+  | 'context___intl___messages___seconds'
   | 'context___intl___messages___event_1_description'
   | 'context___intl___messages___event_2_description'
   | 'context___intl___messages___event_3_description'

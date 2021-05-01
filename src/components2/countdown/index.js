@@ -3,7 +3,7 @@ import { FormattedMessage } from 'gatsby-plugin-intl'
 import Countdown from 'react-countdown'
 import './style.css'
 
-const Completionist = () => <span>You are good to go!</span>
+const Completionist = () => <span></span>
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
   if (completed) {
@@ -15,19 +15,27 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
       <div className="flex-w flex-c">
         <div className="flex-col-c-m size2 how-countdown">
           <span className="l1-txt1 p-b-9 days">{days}</span>
-          <span className="s1-txt1">Days</span>
+          <span className="s1-txt1">
+            <FormattedMessage values={{ count: days }} id="days" />
+          </span>
         </div>
         <div className="flex-col-c-m size2 how-countdown">
           <span className="l1-txt1 p-b-9 hours">{hours}</span>
-          <span className="s1-txt1">Hours</span>
+          <span className="s1-txt1">
+            <FormattedMessage values={{ count: hours }} id="hours" />
+          </span>
         </div>
         <div className="flex-col-c-m size2 how-countdown">
           <span className="l1-txt1 p-b-9 minutes">{minutes}</span>
-          <span className="s1-txt1">Minutes</span>
+          <span className="s1-txt1">
+            <FormattedMessage values={{ count: minutes }} id="minutes" />
+          </span>
         </div>
         <div className="flex-col-c-m size2 how-countdown">
           <span className="l1-txt1 p-b-9 seconds">{seconds}</span>
-          <span className="s1-txt1">Seconds</span>
+          <span className="s1-txt1">
+            <FormattedMessage values={{ count: seconds }} id="seconds" />
+          </span>
         </div>
       </div>
     )
