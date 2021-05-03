@@ -22,26 +22,26 @@ class Rsvp extends Component {
     })
   }
 
-  subimtHandler = (e) => {
+  submitHandler = (e, intl) => {
     e.preventDefault()
 
     const { name, email, rsvp, events, notes, error } = this.state
 
     if (name === '') {
-      error.name = 'Please enter your name'
+      error.name = intl.formatMessage({ id: 'rsvp_name_validation' })
     }
     if (email === '') {
-      error.email = 'Please enter your email'
+      error.email = intl.formatMessage({ id: 'rsvp_email_validation' })
     }
     if (rsvp === '') {
-      error.rsvp = 'Select your number of rsvp'
+      error.rsvp = intl.formatMessage({ id: 'rsvp_number_validation' })
     }
     if (events === '') {
-      error.events = 'Select your event list'
+      error.events = intl.formatMessage({ id: 'rsvp_attending_validation' })
     }
-    if (notes === '') {
-      error.notes = 'Please enter your note'
-    }
+    // if (notes === '') {
+    //   error.notes = intl.formatMessage({ id: 'rsvp_message_validation' })
+    // }
 
     if (error) {
       this.setState({
@@ -53,9 +53,18 @@ class Rsvp extends Component {
       error.email === '' &&
       error.email === '' &&
       error.rsvp === '' &&
-      error.events === '' &&
-      error.notes === ''
+      error.events === ''
+      // && error.notes === ''
     ) {
+      let myForm = document.getElementById('rsvp-form')
+      let formData = new FormData(myForm)
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => console.log('Form successfully submitted'))
+        .catch((error) => alert(error))
       this.setState({
         name: '',
         email: '',
@@ -65,7 +74,6 @@ class Rsvp extends Component {
         error: {},
       })
     }
-
     console.log(this.state)
     console.log(this.state.error.notes)
   }
@@ -85,9 +93,15 @@ class Rsvp extends Component {
                     <p>{intl.formatMessage({ id: 'please_reserve_before' })}</p>
                   </div>
                 </div>
-                <form onSubmit={this.subimtHandler}>
+                <form
+                  id="rsvp-form"
+                  onSubmit={(e) => this.submitHandler(e, intl)}
+                  data-netlify="true"
+                >
                   <div className="contact-form form-style">
                     <div className="row">
+                      <input type="hidden" name="form-name" value="rsvp-form" />
+
                       <div className="col-12 col-sm-6">
                         <input
                           type="text"

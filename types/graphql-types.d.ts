@@ -376,12 +376,17 @@ export type SitePageContextIntlMessages = {
   be_our_guest?: Maybe<Scalars['String']>;
   please_reserve_before?: Maybe<Scalars['String']>;
   rsvp_name?: Maybe<Scalars['String']>;
+  rsvp_name_validation?: Maybe<Scalars['String']>;
   rsvp_email?: Maybe<Scalars['String']>;
+  rsvp_email_validation?: Maybe<Scalars['String']>;
   rsvp_number?: Maybe<Scalars['String']>;
+  rsvp_number_validation?: Maybe<Scalars['String']>;
   rsvp_attending?: Maybe<Scalars['String']>;
   rsvp_attending_option_1?: Maybe<Scalars['String']>;
   rsvp_attending_option_2?: Maybe<Scalars['String']>;
+  rsvp_attending_validation?: Maybe<Scalars['String']>;
   rsvp_message?: Maybe<Scalars['String']>;
+  rsvp_message_validation?: Maybe<Scalars['String']>;
   rsvp_send?: Maybe<Scalars['String']>;
   gift_registration?: Maybe<Scalars['String']>;
   gift_registration_text?: Maybe<Scalars['String']>;
@@ -2558,12 +2563,17 @@ export type SitePageContextIntlMessagesFilterInput = {
   be_our_guest?: Maybe<StringQueryOperatorInput>;
   please_reserve_before?: Maybe<StringQueryOperatorInput>;
   rsvp_name?: Maybe<StringQueryOperatorInput>;
+  rsvp_name_validation?: Maybe<StringQueryOperatorInput>;
   rsvp_email?: Maybe<StringQueryOperatorInput>;
+  rsvp_email_validation?: Maybe<StringQueryOperatorInput>;
   rsvp_number?: Maybe<StringQueryOperatorInput>;
+  rsvp_number_validation?: Maybe<StringQueryOperatorInput>;
   rsvp_attending?: Maybe<StringQueryOperatorInput>;
   rsvp_attending_option_1?: Maybe<StringQueryOperatorInput>;
   rsvp_attending_option_2?: Maybe<StringQueryOperatorInput>;
+  rsvp_attending_validation?: Maybe<StringQueryOperatorInput>;
   rsvp_message?: Maybe<StringQueryOperatorInput>;
+  rsvp_message_validation?: Maybe<StringQueryOperatorInput>;
   rsvp_send?: Maybe<StringQueryOperatorInput>;
   gift_registration?: Maybe<StringQueryOperatorInput>;
   gift_registration_text?: Maybe<StringQueryOperatorInput>;
@@ -2918,12 +2928,17 @@ export type SitePageFieldsEnum =
   | 'context___intl___messages___be_our_guest'
   | 'context___intl___messages___please_reserve_before'
   | 'context___intl___messages___rsvp_name'
+  | 'context___intl___messages___rsvp_name_validation'
   | 'context___intl___messages___rsvp_email'
+  | 'context___intl___messages___rsvp_email_validation'
   | 'context___intl___messages___rsvp_number'
+  | 'context___intl___messages___rsvp_number_validation'
   | 'context___intl___messages___rsvp_attending'
   | 'context___intl___messages___rsvp_attending_option_1'
   | 'context___intl___messages___rsvp_attending_option_2'
+  | 'context___intl___messages___rsvp_attending_validation'
   | 'context___intl___messages___rsvp_message'
+  | 'context___intl___messages___rsvp_message_validation'
   | 'context___intl___messages___rsvp_send'
   | 'context___intl___messages___gift_registration'
   | 'context___intl___messages___gift_registration_text'
