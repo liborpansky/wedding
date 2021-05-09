@@ -167,8 +167,7 @@ class Rsvp extends Component {
                         <p>{error.events ? error.events : ''}</p>
                       </div>
                       <div className="col-12 col-sm-12">
-                        Qui sotto puoi indicare anche se hai esigenze alimentari
-                        particolari
+                        {intl.formatMessage({ id: 'rsvp_info' })}
                         <textarea
                           className="contact-textarea"
                           value={notes}
