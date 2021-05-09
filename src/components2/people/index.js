@@ -25,7 +25,7 @@ const People = (props) => {
                   </div>
                   <div className="person-content">
                     <h3>Federico</h3>
-                    <span>Fratello di lei</span>
+                    <span>{intl.formatMessage({ id: 'groomsmen' })}</span>
                   </div>
                 </div>
               </div>
@@ -36,7 +36,7 @@ const People = (props) => {
                   </div>
                   <div className="person-content">
                     <h3>Lenka</h3>
-                    <span>Sorella di lui</span>
+                    <span>{intl.formatMessage({ id: 'bridesmaid' })}</span>
                   </div>
                 </div>
               </div>

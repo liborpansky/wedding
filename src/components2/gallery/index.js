@@ -18,10 +18,7 @@ class Gallery extends Component {
         <div className="container text-center">
           <div className="row text-center">
             <div className="col col-xs-12">
-              <h6>
-                Vuoi partecipare alla raccolta delle foto del nostro grande
-                giorno?
-              </h6>
+              <h6>{intl.formatMessage({ id: 'participate' })}</h6>
             </div>
           </div>
 
@@ -31,14 +28,11 @@ class Gallery extends Component {
                 <img src={step1} alt="" className="step-image" />
               </div>
               <p className="pt-4">
-                <b>Installa l&apos;applicazione</b>
+                <b>{intl.formatMessage({ id: 'intall_app' })}</b>
               </p>
-              <p>
-                Scarica l&apos;applicazione di WedShoots dal sito
-                www.wedshoots.com/it, da Google Play o dall&apos;App Store.
-              </p>
+              <p>{intl.formatMessage({ id: 'download_app' })}</p>
 
-              <div className="row pt-4">
+              <div className="row py-4">
                 <div className="col-6 col-sm-4 offset-sm-1 col-md-6 offset-md-0">
                   <a
                     rel="noreferrer"
@@ -66,13 +60,10 @@ class Gallery extends Component {
                 <img src={step2} alt="" className="step-image" />
               </div>
               <p className="pt-4">
-                <b>Accedi all&apos;album</b>
+                <b>{intl.formatMessage({ id: 'access_album' })}</b>
               </p>
-              <p>
-                Apri Wedshoots dal tuo smartphone, inserisci il tuo nome e il
-                codice dell&apos;album o scannerizza il codice QR.
-              </p>
-              <p>Codice dell&apos;album:</p>
+              <p>{intl.formatMessage({ id: 'open_wedshoots' })}</p>
+              <p>{intl.formatMessage({ id: 'album_code' })}</p>
               <p>
                 <b>ITcefc67a3</b>
               </p>
@@ -83,12 +74,9 @@ class Gallery extends Component {
                 <img src={step3} alt="" className="step-image" />
               </div>
               <p className="pt-4">
-                <b>Divertiti</b>
+                <b>{intl.formatMessage({ id: 'enjoy' })}</b>
               </p>
-              <p>
-                Il giorno del matrimonio divertiti, scatta tantissime foto e
-                caricale sull&apos;album condiviso!
-              </p>
+              <p>{intl.formatMessage({ id: 'shoot_photos' })}</p>
               <img src={trombetta} alt="" className="gallery-icon" />
             </div>
           </div>

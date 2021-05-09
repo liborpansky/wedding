@@ -339,12 +339,9 @@ export type SitePageContextIntlMessages = {
   rsvp?: Maybe<Scalars['String']>;
   getting_married?: Maybe<Scalars['String']>;
   save_the_date?: Maybe<Scalars['String']>;
-  we_are_waiting?: Maybe<Scalars['String']>;
-  the_big_day?: Maybe<Scalars['String']>;
   happy_couple?: Maybe<Scalars['String']>;
   welcome_big_day?: Maybe<Scalars['String']>;
   welcome_text?: Maybe<Scalars['String']>;
-  read_more?: Maybe<Scalars['String']>;
   our_story?: Maybe<Scalars['String']>;
   story_1_title?: Maybe<Scalars['String']>;
   story_1_date?: Maybe<Scalars['String']>;
@@ -357,6 +354,8 @@ export type SitePageContextIntlMessages = {
   story_5_title?: Maybe<Scalars['String']>;
   story_5_date?: Maybe<Scalars['String']>;
   groomsmen_bridesmaid?: Maybe<Scalars['String']>;
+  groomsmen?: Maybe<Scalars['String']>;
+  bridesmaid?: Maybe<Scalars['String']>;
   when_where?: Maybe<Scalars['String']>;
   see_location?: Maybe<Scalars['String']>;
   event_1_title?: Maybe<Scalars['String']>;
@@ -372,6 +371,14 @@ export type SitePageContextIntlMessages = {
   event_4_date?: Maybe<Scalars['String']>;
   event_4_address?: Maybe<Scalars['String']>;
   our_gallery?: Maybe<Scalars['String']>;
+  participate?: Maybe<Scalars['String']>;
+  intall_app?: Maybe<Scalars['String']>;
+  download_app?: Maybe<Scalars['String']>;
+  access_album?: Maybe<Scalars['String']>;
+  open_wedshoots?: Maybe<Scalars['String']>;
+  album_code?: Maybe<Scalars['String']>;
+  enjoy?: Maybe<Scalars['String']>;
+  shoot_photos?: Maybe<Scalars['String']>;
   available_google_play?: Maybe<Scalars['String']>;
   be_our_guest?: Maybe<Scalars['String']>;
   please_reserve_before?: Maybe<Scalars['String']>;
@@ -387,19 +394,17 @@ export type SitePageContextIntlMessages = {
   rsvp_attending_validation?: Maybe<Scalars['String']>;
   rsvp_message?: Maybe<Scalars['String']>;
   rsvp_message_validation?: Maybe<Scalars['String']>;
+  rsvp_info?: Maybe<Scalars['String']>;
   rsvp_send?: Maybe<Scalars['String']>;
   gift_registration?: Maybe<Scalars['String']>;
   gift_registration_text?: Maybe<Scalars['String']>;
+  holder?: Maybe<Scalars['String']>;
   thank_you?: Maybe<Scalars['String']>;
   for_being_with_us?: Maybe<Scalars['String']>;
   days?: Maybe<Scalars['String']>;
   hours?: Maybe<Scalars['String']>;
   minutes?: Maybe<Scalars['String']>;
   seconds?: Maybe<Scalars['String']>;
-  event_1_description?: Maybe<Scalars['String']>;
-  event_2_description?: Maybe<Scalars['String']>;
-  event_3_description?: Maybe<Scalars['String']>;
-  event_4_description?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownHeading = {
@@ -2526,12 +2531,9 @@ export type SitePageContextIntlMessagesFilterInput = {
   rsvp?: Maybe<StringQueryOperatorInput>;
   getting_married?: Maybe<StringQueryOperatorInput>;
   save_the_date?: Maybe<StringQueryOperatorInput>;
-  we_are_waiting?: Maybe<StringQueryOperatorInput>;
-  the_big_day?: Maybe<StringQueryOperatorInput>;
   happy_couple?: Maybe<StringQueryOperatorInput>;
   welcome_big_day?: Maybe<StringQueryOperatorInput>;
   welcome_text?: Maybe<StringQueryOperatorInput>;
-  read_more?: Maybe<StringQueryOperatorInput>;
   our_story?: Maybe<StringQueryOperatorInput>;
   story_1_title?: Maybe<StringQueryOperatorInput>;
   story_1_date?: Maybe<StringQueryOperatorInput>;
@@ -2544,6 +2546,8 @@ export type SitePageContextIntlMessagesFilterInput = {
   story_5_title?: Maybe<StringQueryOperatorInput>;
   story_5_date?: Maybe<StringQueryOperatorInput>;
   groomsmen_bridesmaid?: Maybe<StringQueryOperatorInput>;
+  groomsmen?: Maybe<StringQueryOperatorInput>;
+  bridesmaid?: Maybe<StringQueryOperatorInput>;
   when_where?: Maybe<StringQueryOperatorInput>;
   see_location?: Maybe<StringQueryOperatorInput>;
   event_1_title?: Maybe<StringQueryOperatorInput>;
@@ -2559,6 +2563,14 @@ export type SitePageContextIntlMessagesFilterInput = {
   event_4_date?: Maybe<StringQueryOperatorInput>;
   event_4_address?: Maybe<StringQueryOperatorInput>;
   our_gallery?: Maybe<StringQueryOperatorInput>;
+  participate?: Maybe<StringQueryOperatorInput>;
+  intall_app?: Maybe<StringQueryOperatorInput>;
+  download_app?: Maybe<StringQueryOperatorInput>;
+  access_album?: Maybe<StringQueryOperatorInput>;
+  open_wedshoots?: Maybe<StringQueryOperatorInput>;
+  album_code?: Maybe<StringQueryOperatorInput>;
+  enjoy?: Maybe<StringQueryOperatorInput>;
+  shoot_photos?: Maybe<StringQueryOperatorInput>;
   available_google_play?: Maybe<StringQueryOperatorInput>;
   be_our_guest?: Maybe<StringQueryOperatorInput>;
   please_reserve_before?: Maybe<StringQueryOperatorInput>;
@@ -2574,19 +2586,17 @@ export type SitePageContextIntlMessagesFilterInput = {
   rsvp_attending_validation?: Maybe<StringQueryOperatorInput>;
   rsvp_message?: Maybe<StringQueryOperatorInput>;
   rsvp_message_validation?: Maybe<StringQueryOperatorInput>;
+  rsvp_info?: Maybe<StringQueryOperatorInput>;
   rsvp_send?: Maybe<StringQueryOperatorInput>;
   gift_registration?: Maybe<StringQueryOperatorInput>;
   gift_registration_text?: Maybe<StringQueryOperatorInput>;
+  holder?: Maybe<StringQueryOperatorInput>;
   thank_you?: Maybe<StringQueryOperatorInput>;
   for_being_with_us?: Maybe<StringQueryOperatorInput>;
   days?: Maybe<StringQueryOperatorInput>;
   hours?: Maybe<StringQueryOperatorInput>;
   minutes?: Maybe<StringQueryOperatorInput>;
   seconds?: Maybe<StringQueryOperatorInput>;
-  event_1_description?: Maybe<StringQueryOperatorInput>;
-  event_2_description?: Maybe<StringQueryOperatorInput>;
-  event_3_description?: Maybe<StringQueryOperatorInput>;
-  event_4_description?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginFilterInput = {
@@ -2891,12 +2901,9 @@ export type SitePageFieldsEnum =
   | 'context___intl___messages___rsvp'
   | 'context___intl___messages___getting_married'
   | 'context___intl___messages___save_the_date'
-  | 'context___intl___messages___we_are_waiting'
-  | 'context___intl___messages___the_big_day'
   | 'context___intl___messages___happy_couple'
   | 'context___intl___messages___welcome_big_day'
   | 'context___intl___messages___welcome_text'
-  | 'context___intl___messages___read_more'
   | 'context___intl___messages___our_story'
   | 'context___intl___messages___story_1_title'
   | 'context___intl___messages___story_1_date'
@@ -2909,6 +2916,8 @@ export type SitePageFieldsEnum =
   | 'context___intl___messages___story_5_title'
   | 'context___intl___messages___story_5_date'
   | 'context___intl___messages___groomsmen_bridesmaid'
+  | 'context___intl___messages___groomsmen'
+  | 'context___intl___messages___bridesmaid'
   | 'context___intl___messages___when_where'
   | 'context___intl___messages___see_location'
   | 'context___intl___messages___event_1_title'
@@ -2924,6 +2933,14 @@ export type SitePageFieldsEnum =
   | 'context___intl___messages___event_4_date'
   | 'context___intl___messages___event_4_address'
   | 'context___intl___messages___our_gallery'
+  | 'context___intl___messages___participate'
+  | 'context___intl___messages___intall_app'
+  | 'context___intl___messages___download_app'
+  | 'context___intl___messages___access_album'
+  | 'context___intl___messages___open_wedshoots'
+  | 'context___intl___messages___album_code'
+  | 'context___intl___messages___enjoy'
+  | 'context___intl___messages___shoot_photos'
   | 'context___intl___messages___available_google_play'
   | 'context___intl___messages___be_our_guest'
   | 'context___intl___messages___please_reserve_before'
@@ -2939,19 +2956,17 @@ export type SitePageFieldsEnum =
   | 'context___intl___messages___rsvp_attending_validation'
   | 'context___intl___messages___rsvp_message'
   | 'context___intl___messages___rsvp_message_validation'
+  | 'context___intl___messages___rsvp_info'
   | 'context___intl___messages___rsvp_send'
   | 'context___intl___messages___gift_registration'
   | 'context___intl___messages___gift_registration_text'
+  | 'context___intl___messages___holder'
   | 'context___intl___messages___thank_you'
   | 'context___intl___messages___for_being_with_us'
   | 'context___intl___messages___days'
   | 'context___intl___messages___hours'
   | 'context___intl___messages___minutes'
   | 'context___intl___messages___seconds'
-  | 'context___intl___messages___event_1_description'
-  | 'context___intl___messages___event_2_description'
-  | 'context___intl___messages___event_3_description'
-  | 'context___intl___messages___event_4_description'
   | 'context___intl___routed'
   | 'context___intl___originalPath'
   | 'context___intl___redirect'

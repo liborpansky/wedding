@@ -49,7 +49,10 @@ class Gift extends Component {
                 <FormattedMessage id="gift_registration_text" />
               </h5>
               <div className="pt-4">
-                <b>INTESTATARIO:</b> Martina Longo
+                <b>
+                  <FormattedMessage id="gift_registration" />:
+                </b>{' '}
+                Martina Longo
               </div>
               <div>
                 <b>IBAN:</b> IT02A0306979494100000000912
