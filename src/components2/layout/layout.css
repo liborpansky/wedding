@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Muli:300,400,500,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montez&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Great+Vibes|Muli:300,400,500,600,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap');
 
 /* @font-face {
   font-family: 'Playlist';
@@ -15,7 +15,7 @@
 h1,
 h2,
 h3 {
-  font-family: 'Montez', cursive;
+  font-family: 'Euphoria Script', cursive;
 }
 body {
   font-family: 'Muli', sans-serif;

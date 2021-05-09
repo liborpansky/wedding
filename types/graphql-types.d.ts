@@ -481,9 +481,9 @@ export type MarkdownRemarkFrontmatter = {
   date?: Maybe<Scalars['Date']>;
   layout?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
-  category?: Maybe<Scalars['String']>;
-  description?: Maybe<Scalars['String']>;
   image?: Maybe<File>;
+  description?: Maybe<Scalars['String']>;
+  category?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
@@ -1245,9 +1245,9 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   date?: Maybe<DateQueryOperatorInput>;
   layout?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
-  category?: Maybe<StringQueryOperatorInput>;
-  description?: Maybe<StringQueryOperatorInput>;
   image?: Maybe<FileFilterInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+  category?: Maybe<StringQueryOperatorInput>;
   tags?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -1505,8 +1505,6 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___frontmatter___date'
   | 'childrenMarkdownRemark___frontmatter___layout'
   | 'childrenMarkdownRemark___frontmatter___path'
-  | 'childrenMarkdownRemark___frontmatter___category'
-  | 'childrenMarkdownRemark___frontmatter___description'
   | 'childrenMarkdownRemark___frontmatter___image___sourceInstanceName'
   | 'childrenMarkdownRemark___frontmatter___image___absolutePath'
   | 'childrenMarkdownRemark___frontmatter___image___relativePath'
@@ -1545,6 +1543,8 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___frontmatter___image___childrenImageSharp'
   | 'childrenMarkdownRemark___frontmatter___image___id'
   | 'childrenMarkdownRemark___frontmatter___image___children'
+  | 'childrenMarkdownRemark___frontmatter___description'
+  | 'childrenMarkdownRemark___frontmatter___category'
   | 'childrenMarkdownRemark___frontmatter___tags'
   | 'childrenMarkdownRemark___excerpt'
   | 'childrenMarkdownRemark___rawMarkdownBody'
@@ -1603,8 +1603,6 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___date'
   | 'childMarkdownRemark___frontmatter___layout'
   | 'childMarkdownRemark___frontmatter___path'
-  | 'childMarkdownRemark___frontmatter___category'
-  | 'childMarkdownRemark___frontmatter___description'
   | 'childMarkdownRemark___frontmatter___image___sourceInstanceName'
   | 'childMarkdownRemark___frontmatter___image___absolutePath'
   | 'childMarkdownRemark___frontmatter___image___relativePath'
@@ -1643,6 +1641,8 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___image___childrenImageSharp'
   | 'childMarkdownRemark___frontmatter___image___id'
   | 'childMarkdownRemark___frontmatter___image___children'
+  | 'childMarkdownRemark___frontmatter___description'
+  | 'childMarkdownRemark___frontmatter___category'
   | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
@@ -3179,8 +3179,6 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___date'
   | 'frontmatter___layout'
   | 'frontmatter___path'
-  | 'frontmatter___category'
-  | 'frontmatter___description'
   | 'frontmatter___image___sourceInstanceName'
   | 'frontmatter___image___absolutePath'
   | 'frontmatter___image___relativePath'
@@ -3259,6 +3257,8 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___image___internal___mediaType'
   | 'frontmatter___image___internal___owner'
   | 'frontmatter___image___internal___type'
+  | 'frontmatter___description'
+  | 'frontmatter___category'
   | 'frontmatter___tags'
   | 'excerpt'
   | 'rawMarkdownBody'
