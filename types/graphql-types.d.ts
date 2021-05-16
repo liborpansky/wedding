@@ -396,6 +396,7 @@ export type SitePageContextIntlMessages = {
   rsvp_message_validation?: Maybe<Scalars['String']>;
   rsvp_info?: Maybe<Scalars['String']>;
   rsvp_send?: Maybe<Scalars['String']>;
+  rsvp_confirmation?: Maybe<Scalars['String']>;
   gift_registration?: Maybe<Scalars['String']>;
   gift_registration_text?: Maybe<Scalars['String']>;
   holder?: Maybe<Scalars['String']>;
@@ -481,10 +482,10 @@ export type MarkdownRemarkFrontmatter = {
   date?: Maybe<Scalars['Date']>;
   layout?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
-  image?: Maybe<File>;
-  description?: Maybe<Scalars['String']>;
   category?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
+  image?: Maybe<File>;
+  description?: Maybe<Scalars['String']>;
 };
 
 
@@ -806,11 +807,7 @@ export type SitePluginPluginOptions = {
   include_favicon?: Maybe<Scalars['Boolean']>;
   legacy?: Maybe<Scalars['Boolean']>;
   theme_color_in_head?: Maybe<Scalars['Boolean']>;
-  trackingId?: Maybe<Scalars['String']>;
-  head?: Maybe<Scalars['Boolean']>;
-  anonymize?: Maybe<Scalars['Boolean']>;
-  respectDNT?: Maybe<Scalars['Boolean']>;
-  pageTransitionDelay?: Maybe<Scalars['Int']>;
+  trackingIds?: Maybe<Array<Maybe<Scalars['String']>>>;
   mergeSecurityHeaders?: Maybe<Scalars['Boolean']>;
   mergeLinkHeaders?: Maybe<Scalars['Boolean']>;
   mergeCachingHeaders?: Maybe<Scalars['Boolean']>;
@@ -1245,10 +1242,10 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   date?: Maybe<DateQueryOperatorInput>;
   layout?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
-  image?: Maybe<FileFilterInput>;
-  description?: Maybe<StringQueryOperatorInput>;
   category?: Maybe<StringQueryOperatorInput>;
   tags?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<FileFilterInput>;
+  description?: Maybe<StringQueryOperatorInput>;
 };
 
 export type FileFilterInput = {
@@ -1505,6 +1502,8 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___frontmatter___date'
   | 'childrenMarkdownRemark___frontmatter___layout'
   | 'childrenMarkdownRemark___frontmatter___path'
+  | 'childrenMarkdownRemark___frontmatter___category'
+  | 'childrenMarkdownRemark___frontmatter___tags'
   | 'childrenMarkdownRemark___frontmatter___image___sourceInstanceName'
   | 'childrenMarkdownRemark___frontmatter___image___absolutePath'
   | 'childrenMarkdownRemark___frontmatter___image___relativePath'
@@ -1544,8 +1543,6 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___frontmatter___image___id'
   | 'childrenMarkdownRemark___frontmatter___image___children'
   | 'childrenMarkdownRemark___frontmatter___description'
-  | 'childrenMarkdownRemark___frontmatter___category'
-  | 'childrenMarkdownRemark___frontmatter___tags'
   | 'childrenMarkdownRemark___excerpt'
   | 'childrenMarkdownRemark___rawMarkdownBody'
   | 'childrenMarkdownRemark___fileAbsolutePath'
@@ -1603,6 +1600,8 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___date'
   | 'childMarkdownRemark___frontmatter___layout'
   | 'childMarkdownRemark___frontmatter___path'
+  | 'childMarkdownRemark___frontmatter___category'
+  | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___frontmatter___image___sourceInstanceName'
   | 'childMarkdownRemark___frontmatter___image___absolutePath'
   | 'childMarkdownRemark___frontmatter___image___relativePath'
@@ -1642,8 +1641,6 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___image___id'
   | 'childMarkdownRemark___frontmatter___image___children'
   | 'childMarkdownRemark___frontmatter___description'
-  | 'childMarkdownRemark___frontmatter___category'
-  | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -2588,6 +2585,7 @@ export type SitePageContextIntlMessagesFilterInput = {
   rsvp_message_validation?: Maybe<StringQueryOperatorInput>;
   rsvp_info?: Maybe<StringQueryOperatorInput>;
   rsvp_send?: Maybe<StringQueryOperatorInput>;
+  rsvp_confirmation?: Maybe<StringQueryOperatorInput>;
   gift_registration?: Maybe<StringQueryOperatorInput>;
   gift_registration_text?: Maybe<StringQueryOperatorInput>;
   holder?: Maybe<StringQueryOperatorInput>;
@@ -2644,11 +2642,7 @@ export type SitePluginPluginOptionsFilterInput = {
   include_favicon?: Maybe<BooleanQueryOperatorInput>;
   legacy?: Maybe<BooleanQueryOperatorInput>;
   theme_color_in_head?: Maybe<BooleanQueryOperatorInput>;
-  trackingId?: Maybe<StringQueryOperatorInput>;
-  head?: Maybe<BooleanQueryOperatorInput>;
-  anonymize?: Maybe<BooleanQueryOperatorInput>;
-  respectDNT?: Maybe<BooleanQueryOperatorInput>;
-  pageTransitionDelay?: Maybe<IntQueryOperatorInput>;
+  trackingIds?: Maybe<StringQueryOperatorInput>;
   mergeSecurityHeaders?: Maybe<BooleanQueryOperatorInput>;
   mergeLinkHeaders?: Maybe<BooleanQueryOperatorInput>;
   mergeCachingHeaders?: Maybe<BooleanQueryOperatorInput>;
@@ -2958,6 +2952,7 @@ export type SitePageFieldsEnum =
   | 'context___intl___messages___rsvp_message_validation'
   | 'context___intl___messages___rsvp_info'
   | 'context___intl___messages___rsvp_send'
+  | 'context___intl___messages___rsvp_confirmation'
   | 'context___intl___messages___gift_registration'
   | 'context___intl___messages___gift_registration_text'
   | 'context___intl___messages___holder'
@@ -3050,11 +3045,7 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___include_favicon'
   | 'pluginCreator___pluginOptions___legacy'
   | 'pluginCreator___pluginOptions___theme_color_in_head'
-  | 'pluginCreator___pluginOptions___trackingId'
-  | 'pluginCreator___pluginOptions___head'
-  | 'pluginCreator___pluginOptions___anonymize'
-  | 'pluginCreator___pluginOptions___respectDNT'
-  | 'pluginCreator___pluginOptions___pageTransitionDelay'
+  | 'pluginCreator___pluginOptions___trackingIds'
   | 'pluginCreator___pluginOptions___mergeSecurityHeaders'
   | 'pluginCreator___pluginOptions___mergeLinkHeaders'
   | 'pluginCreator___pluginOptions___mergeCachingHeaders'
@@ -3179,6 +3170,8 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___date'
   | 'frontmatter___layout'
   | 'frontmatter___path'
+  | 'frontmatter___category'
+  | 'frontmatter___tags'
   | 'frontmatter___image___sourceInstanceName'
   | 'frontmatter___image___absolutePath'
   | 'frontmatter___image___relativePath'
@@ -3258,8 +3251,6 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___image___internal___owner'
   | 'frontmatter___image___internal___type'
   | 'frontmatter___description'
-  | 'frontmatter___category'
-  | 'frontmatter___tags'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -3896,11 +3887,7 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___include_favicon'
   | 'pluginOptions___legacy'
   | 'pluginOptions___theme_color_in_head'
-  | 'pluginOptions___trackingId'
-  | 'pluginOptions___head'
-  | 'pluginOptions___anonymize'
-  | 'pluginOptions___respectDNT'
-  | 'pluginOptions___pageTransitionDelay'
+  | 'pluginOptions___trackingIds'
   | 'pluginOptions___mergeSecurityHeaders'
   | 'pluginOptions___mergeLinkHeaders'
   | 'pluginOptions___mergeCachingHeaders'

@@ -7249,13 +7249,13 @@ gatsby-plugin-catch-links@3.4.0:
     "@babel/runtime" "^7.12.5"
     escape-string-regexp "^1.0.5"
 
-gatsby-plugin-google-analytics@3.4.0:
+gatsby-plugin-google-gtag@3.4.0:
   version "3.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-3.4.0.tgz#4630d0d8f2f37806be50de9bb3e120f4045150d1"
-  integrity sha512-dH/ZHPo8fzQq5DoFVR6oMd1n3xnsmvvy+CTzzaWCNxF5DGikTJFuIvUm3nLchBuRkfIlj2UbDkJfuPGwmfkTqw==
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-3.4.0.tgz#87d149e778cfa23b9e0463de696f3c00cf002925"
+  integrity sha512-pIzTY+mVzb/JcStLgvhzmr9kmdN8sz6LnTTXOFzvr8sTZ9WXnwWUqJqjZxaEeGYznJHItu4KP8VWg6RRpUDoBg==
   dependencies:
     "@babel/runtime" "^7.12.5"
-    minimatch "3.0.4"
+    minimatch "^3.0.4"
 
 gatsby-plugin-graphql-codegen@^2.7.1:
   version "2.7.1"
