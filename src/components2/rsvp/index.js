@@ -9,6 +9,7 @@ class Rsvp extends Component {
     rsvp: '',
     events: '',
     notes: '',
+    sent: false,
     error: {},
   }
 
@@ -63,8 +64,13 @@ class Rsvp extends Component {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString(),
       })
-        .then(() => console.log('Form successfully submitted'))
+        .then(() => {
+          this.setState({
+            sent: true,
+          })
+        })
         .catch((error) => alert(error))
+
       this.setState({
         name: '',
         email: '',
@@ -86,108 +92,129 @@ class Rsvp extends Component {
         <div className="container">
           <div className="row">
             <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-              <div className="rsvp-wrap">
-                <div className="col-12">
-                  <div className="section-title section-title4 text-center">
-                    <h2>{intl.formatMessage({ id: 'be_our_guest' })}</h2>
-                    <p>{intl.formatMessage({ id: 'please_reserve_before' })}</p>
+              {this.state.sent && (
+                <div className="rsvp-wrap">
+                  <div className="col-12">
+                    <div className="section-title section-title4 text-center">
+                      <p>{intl.formatMessage({ id: 'rsvp_confirmation' })}</p>
+                    </div>
                   </div>
                 </div>
-                <form
-                  id="rsvp-form"
-                  onSubmit={(e) => this.submitHandler(e, intl)}
-                  data-netlify="true"
-                >
-                  <div className="contact-form form-style">
-                    <div className="row">
-                      <input type="hidden" name="form-name" value="rsvp-form" />
-
-                      <div className="col-12 col-sm-6">
-                        <input
-                          type="text"
-                          value={name}
-                          onChange={this.changeHandler}
-                          placeholder={intl.formatMessage({ id: 'rsvp_name' })}
-                          id="fname"
-                          name="name"
-                        />
-                        <p>{error.name ? error.name : ''}</p>
-                      </div>
-                      <div className="col-12  col-sm-6">
-                        <input
-                          type="text"
-                          placeholder={intl.formatMessage({ id: 'rsvp_email' })}
-                          onChange={this.changeHandler}
-                          value={email}
-                          id="email"
-                          name="email"
-                        />
-                        <p>{error.email ? error.email : ''}</p>
-                      </div>
-                      <div className="col col-sm-6 col-12">
-                        <select
-                          className="form-control"
-                          onChange={this.changeHandler}
-                          value={rsvp}
-                          name="rsvp"
-                        >
-                          <option disabled value="">
-                            {intl.formatMessage({ id: 'rsvp_number' })}
-                          </option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                        </select>
-                        <p>{error.rsvp ? error.rsvp : ''}</p>
-                      </div>
-                      <div className="col col-sm-6 col-12">
-                        <select
-                          className="form-control"
-                          onChange={this.changeHandler}
-                          value={events}
-                          name="events"
-                        >
-                          <option disabled value="">
-                            {intl.formatMessage({ id: 'rsvp_attending' })}
-                          </option>
-                          <option value="1">
-                            {intl.formatMessage({
-                              id: 'rsvp_attending_option_1',
-                            })}
-                          </option>
-                          <option value="2">
-                            {intl.formatMessage({
-                              id: 'rsvp_attending_option_2',
-                            })}
-                          </option>
-                        </select>
-                        <p>{error.events ? error.events : ''}</p>
-                      </div>
-                      <div className="col-12 col-sm-12">
-                        {intl.formatMessage({ id: 'rsvp_info' })}
-                        <textarea
-                          className="contact-textarea"
-                          value={notes}
-                          onChange={this.changeHandler}
-                          placeholder={intl.formatMessage({
-                            id: 'rsvp_message',
-                          })}
-                          name="notes"
-                        ></textarea>
-                        <p>{error.notes ? error.notes : ''}</p>
-                      </div>
-                    </div>
-                    <div className="col-12 text-center">
-                      <button id="submit" type="submit" className="submit">
-                        {intl.formatMessage({ id: 'rsvp_send' })}
-                      </button>
+              )}
+              {!this.state.sent && (
+                <div className="rsvp-wrap">
+                  <div className="col-12">
+                    <div className="section-title section-title4 text-center">
+                      <h2>{intl.formatMessage({ id: 'be_our_guest' })}</h2>
+                      <p>
+                        {intl.formatMessage({ id: 'please_reserve_before' })}
+                      </p>
                     </div>
                   </div>
-                </form>
-              </div>
+                  <form
+                    id="rsvp-form"
+                    onSubmit={(e) => this.submitHandler(e, intl)}
+                    data-netlify="true"
+                  >
+                    <div className="contact-form form-style">
+                      <div className="row">
+                        <input
+                          type="hidden"
+                          name="form-name"
+                          value="rsvp-form"
+                        />
+
+                        <div className="col-12 col-sm-6">
+                          <input
+                            type="text"
+                            value={name}
+                            onChange={this.changeHandler}
+                            placeholder={intl.formatMessage({
+                              id: 'rsvp_name',
+                            })}
+                            id="fname"
+                            name="name"
+                          />
+                          <p>{error.name ? error.name : ''}</p>
+                        </div>
+                        <div className="col-12  col-sm-6">
+                          <input
+                            type="text"
+                            placeholder={intl.formatMessage({
+                              id: 'rsvp_email',
+                            })}
+                            onChange={this.changeHandler}
+                            value={email}
+                            id="email"
+                            name="email"
+                          />
+                          <p>{error.email ? error.email : ''}</p>
+                        </div>
+                        <div className="col col-sm-6 col-12">
+                          <select
+                            className="form-control"
+                            onChange={this.changeHandler}
+                            value={rsvp}
+                            name="rsvp"
+                          >
+                            <option disabled value="">
+                              {intl.formatMessage({ id: 'rsvp_number' })}
+                            </option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                          </select>
+                          <p>{error.rsvp ? error.rsvp : ''}</p>
+                        </div>
+                        <div className="col col-sm-6 col-12">
+                          <select
+                            className="form-control"
+                            onChange={this.changeHandler}
+                            value={events}
+                            name="events"
+                          >
+                            <option disabled value="">
+                              {intl.formatMessage({ id: 'rsvp_attending' })}
+                            </option>
+                            <option value="1">
+                              {intl.formatMessage({
+                                id: 'rsvp_attending_option_1',
+                              })}
+                            </option>
+                            <option value="2">
+                              {intl.formatMessage({
+                                id: 'rsvp_attending_option_2',
+                              })}
+                            </option>
+                          </select>
+                          <p>{error.events ? error.events : ''}</p>
+                        </div>
+                        <div className="col-12 col-sm-12">
+                          {intl.formatMessage({ id: 'rsvp_info' })}
+                          <textarea
+                            className="contact-textarea"
+                            value={notes}
+                            onChange={this.changeHandler}
+                            placeholder={intl.formatMessage({
+                              id: 'rsvp_message',
+                            })}
+                            name="notes"
+                          ></textarea>
+                          <p>{error.notes ? error.notes : ''}</p>
+                        </div>
+                      </div>
+                      <div className="col-12 text-center">
+                        <button id="submit" type="submit" className="submit">
+                          {intl.formatMessage({ id: 'rsvp_send' })}
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              )}
             </div>
           </div>
         </div>
