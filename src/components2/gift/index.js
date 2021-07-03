@@ -50,7 +50,7 @@ class Gift extends Component {
               </h5>
               <div className="pt-4">
                 <b>
-                  <FormattedMessage id="gift_registration" />:
+                  <FormattedMessage id="holder" />:
                 </b>{' '}
                 Martina Longo
               </div>
